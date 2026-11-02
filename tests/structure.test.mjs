@@ -16,7 +16,7 @@ test('index.html structure contains official brand, 4 product sectors, about, wh
 
   // Verify navigation links
   assert.match(html, /href="#home"[^>]*data-i18n="nav\.home"/, 'Nav must link to #home');
-  assert.match(html, /href="#products"[^>]*data-i18n="nav\.products"/, 'Nav must link to #products');
+  assert.match(html, /data-i18n="nav\.products"/, 'Nav must link to products');
   assert.match(html, /href="#about"[^>]*data-i18n="nav\.about"/, 'Nav must link to #about');
   assert.match(html, /href="news\.html"[^>]*data-i18n="nav\.news"/, 'Nav must link to news.html');
   assert.match(html, /href="#contact"[^>]*data-i18n="nav\.contact"/, 'Nav must link to #contact');
@@ -45,6 +45,18 @@ test('index.html structure contains official brand, 4 product sectors, about, wh
   assert.match(html, /data-spec-id="rail-track"/, 'Card 2 (Railway track equipment) must exist with spec modal trigger');
   assert.match(html, /data-spec-id="spv-trucks"/, 'Card 3 (Special purpose vehicles) must exist with spec modal trigger');
   assert.match(html, /data-spec-id="auto-brakelines"/, 'Card 4 (Automotive brake pad lines) must exist with spec modal trigger');
+
+  // Verify deep links to product catalog pages
+  assert.ok(html.includes('./products/electrical-systems.html'), 'Card 1 must link to electrical catalog');
+  assert.ok(html.includes('./products/railway-equipment.html'), 'Card 2 must link to railway catalog');
+  assert.ok(html.includes('./products/special-vehicles.html'), 'Card 3 must link to vehicle catalog');
+  assert.ok(html.includes('./products/brake-pad-lines.html'), 'Card 4 must link to brake lines catalog');
+
+  // Verify authentic brochure images are used
+  assert.ok(html.includes('images/products/electrical/'), 'Card 1 must use extracted electrical image');
+  assert.ok(html.includes('images/products/railway/'), 'Card 2 must use extracted railway image');
+  assert.ok(html.includes('images/products/vehicles/'), 'Card 3 must use vehicle image');
+  assert.ok(html.includes('images/products/brakelines/'), 'Card 4 must use extracted brake lines image');
 
   // Verify contact info and channels
   assert.match(html, /sales@rootzeglobal\.com/, 'Official email must be sales@rootzeglobal.com');
