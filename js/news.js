@@ -64,6 +64,42 @@
       }
     });
 
+    // 3. AOS Animation
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        duration: 800,
+        easing: 'slide',
+        once: true
+      });
+    }
+
+    // 4. Sticky Navbar Behavior
+    $(window).scroll(function() {
+      var st = $(this).scrollTop();
+      var navbar = $('#ftco-navbar');
+      if (st > 150) {
+        if (!navbar.hasClass('scrolled')) {
+          navbar.addClass('scrolled');
+        }
+      }
+      if (st < 150) {
+        if (navbar.hasClass('scrolled')) {
+          navbar.removeClass('scrolled sleep');
+        }
+      }
+      if (st > 350) {
+        if (!navbar.hasClass('awake')) {
+          navbar.addClass('awake');
+        }
+      }
+      if (st < 350) {
+        if (navbar.hasClass('awake')) {
+          navbar.removeClass('awake');
+          navbar.addClass('sleep');
+        }
+      }
+    });
+
     // 3. Category Filter Logic
     $('.news-filter-btn').on('click', function(e) {
       e.preventDefault();

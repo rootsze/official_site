@@ -270,6 +270,14 @@
       $('#specModal').modal('show');
     });
 
+    // Pre-select category in contact form when card Inquire button clicked
+    $('.car-wrap a[href="#contact"]').on('click', function() {
+      var cat = $(this).attr('data-inquire-cat');
+      if (cat) {
+        $('#inqCategory').val(cat);
+      }
+    });
+
     // 7. B2B Inquiry Form Submission (Web3Forms AJAX with graceful fallback)
     $('#inquiryForm').on('submit', function(e) {
       e.preventDefault();
@@ -376,8 +384,8 @@
     var isZh = (lang === 'zh');
 
     var subject = isZh
-      ? '[RootZe 新能源分销采购询盘] ' + category + ' — ' + company
-      : '[RootZe Distribution Inquiry] ' + category + ' — ' + company;
+      ? '[RootZe 工业装备与特种车辆出口询盘] ' + category + ' — ' + company
+      : '[RootZe Industrial Equipment Inquiry] ' + category + ' — ' + company;
 
     var body = isZh
       ? '尊敬的 RootZe 业务团队：\n\n' +

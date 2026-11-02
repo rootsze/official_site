@@ -495,7 +495,7 @@
           var el = elements[i];
           var key = el.getAttribute('data-i18n');
           var val = t(key);
-          if (val) {
+          if (val && val !== key) {
             el.innerHTML = val;
           }
         }
@@ -506,7 +506,7 @@
           var pel = placeholders[j];
           var pkey = pel.getAttribute('data-i18n-placeholder');
           var pval = t(pkey);
-          if (pval) {
+          if (pval && pval !== pkey) {
             pel.setAttribute('placeholder', pval);
           }
         }

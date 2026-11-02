@@ -18,6 +18,23 @@
   color: var(--rootze-accent) !important;
 }
 
+/* Scrolled navbar dark text for brand */
+.ftco-navbar-light.scrolled .navbar-brand span,
+.ftco-navbar-light.scrolled .navbar-brand div span {
+  color: var(--rootze-dark) !important;
+}
+.ftco-navbar-light.scrolled .navbar-brand div {
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
+.ftco-navbar-light.scrolled .navbar-brand div small {
+  color: var(--rootze-primary-hover) !important;
+}
+
+/* Smooth anchor offset for fixed navbar */
+section {
+  scroll-margin-top: 80px;
+}
+
 /* Navbar responsive typography & no-wrap fix */
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
   white-space: nowrap !important;
@@ -172,7 +189,7 @@
   text-align: center;
   font-size: 28px;
   box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
-  z-index: 1050;
+  z-index: 1035;
   display: flex;
   align-items: center;
   justify-content: center;
