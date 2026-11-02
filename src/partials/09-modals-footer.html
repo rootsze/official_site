@@ -1,0 +1,134 @@
+    <!-- Inquiry Success & Backup Dispatch Modal -->
+    <div class="modal fade" id="inquirySuccessModal" tabindex="-1" role="dialog" aria-labelledby="inquirySuccessModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header border-0 pb-0">
+            <h5 class="modal-title font-weight-bold" id="inquirySuccessModalLabel" data-i18n="contact.success_title">Inquiry Prepared Successfully!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body py-4">
+            <p class="text-muted mb-3" data-i18n="contact.success_desc">Your inquiry details have been formatted. Click below to launch your email client or chat directly on WhatsApp.</p>
+            <div class="p-3 mb-4 rounded bg-light" style="max-height: 140px; overflow-y: auto; font-size: 13px; font-family: monospace; white-space: pre-wrap;" id="modalInquirySummary"></div>
+            <div class="d-flex flex-wrap gap-2">
+              <a id="modalMailtoLink" href="#" class="btn btn-primary btn-sm py-2 px-3 mr-sm-2 mb-2"><span class="ion-ios-mail mr-1"></span> <span data-i18n="contact.modal_btn_mail">Open Email Client</span></a>
+              <a id="modalWhatsappLink" href="#" target="_blank" rel="noopener" class="btn btn-success btn-sm py-2 px-3 mr-sm-2 mb-2" style="background-color: #25d366; border-color: #25d366;"><span class="ion-logo-whatsapp mr-1"></span> <span data-i18n="contact.modal_btn_wa">Send via WhatsApp</span></a>
+              <button type="button" id="modalCopyBtn" class="btn btn-outline-secondary btn-sm py-2 px-3 mb-2"><span class="ion-ios-copy mr-1"></span> <span id="modalCopyBtnText" data-i18n="contact.modal_btn_copy">Copy Inquiry Text</span></button>
+            </div>
+          </div>
+          <div class="modal-footer border-0 pt-0">
+            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" data-i18n="modal.close">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Technical Specification Modal -->
+    <div class="modal fade" id="specModal" tabindex="-1" role="dialog" aria-labelledby="specModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title font-weight-bold" id="specModalLabel" data-i18n="modal.spec_title">Product Technical Specifications</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body p-4">
+            <h4 class="font-weight-bold mb-3 text-primary" id="specModalTitle">Specification</h4>
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped mb-0">
+                <tbody id="specModalTableBody">
+                  <!-- Injected via JavaScript based on product selected -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" data-i18n="modal.close">Close</button>
+            <a href="#contact" class="btn btn-primary" id="specModalInquireBtn" data-i18n="modal.btn_inquire">Inquire About This Model</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/8615168203740?text=Hello%20Rootze%20Team%2C%20I%20am%20interested%20in%20your%20industrial%20equipment%20and%20vehicles." target="_blank" rel="noopener" class="whatsapp-float" title="Chat with Rootze Export Team on WhatsApp">
+      <span class="ion-logo-whatsapp"></span>
+    </a>
+
+    <!-- Footer -->
+    <footer class="ftco-footer ftco-bg-dark ftco-section" style="background: var(--rootze-dark); padding: 70px 0 30px;">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <div class="mb-3">
+                <img src="./images/logo-white.png" alt="Rootze Logo" style="height: 38px; width: auto; object-fit: contain;">
+              </div>
+              <h5 class="text-white font-weight-bold mb-2" style="font-size: 15px;" data-i18n="brand.legal_name">襄阳如志进出口有限公司</h5>
+              <p class="text-light" style="opacity: 0.8; font-size: 13.5px; line-height: 1.7;" data-i18n="footer.about_text">Rootze operates as the authorized international export arm for an equity-partnered coalition of specialized industrial equipment, railway tools, special purpose vehicles, and automotive manufacturing lines in Xiangyang, Hubei, China.</p>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2 text-white" data-i18n="footer.quick_links">Quick Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#home" class="py-1 d-block text-light" style="opacity: 0.8;" data-i18n="nav.home">Home</a></li>
+                <li><a href="#products" class="py-1 d-block text-light" style="opacity: 0.8;" data-i18n="nav.products">Products</a></li>
+                <li><a href="#about" class="py-1 d-block text-light" style="opacity: 0.8;" data-i18n="nav.about">About Us</a></li>
+                <li><a href="news.html" class="py-1 d-block text-light" style="opacity: 0.8;" data-i18n="nav.news">News</a></li>
+                <li><a href="#contact" class="py-1 d-block text-light" style="opacity: 0.8;" data-i18n="nav.contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2 text-white" data-i18n="footer.products_title">Product Categories</h2>
+              <ul class="list-unstyled">
+                <li><a href="#products" class="py-1 d-block text-light" style="opacity: 0.8;" data-i18n="products.cat1_title">Industrial Electrical Systems</a></li>
+                <li><a href="#products" class="py-1 d-block text-light" style="opacity: 0.8;" data-i18n="products.cat2_title">Railway Track Equipment</a></li>
+                <li><a href="#products" class="py-1 d-block text-light" style="opacity: 0.8;" data-i18n="products.cat3_title">Special Purpose Vehicles</a></li>
+                <li><a href="#products" class="py-1 d-block text-light" style="opacity: 0.8;" data-i18n="products.cat4_title">Automotive Manufacturing Lines</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2 text-white" data-i18n="contact.direct_info_title">Contact Information</h2>
+              <div class="block-23 mb-3">
+                <ul class="list-unstyled">
+                  <li><span class="icon icon-map-marker text-primary"></span><span class="text text-light" style="opacity: 0.8;" data-i18n="contact.office_val">Dongfeng Automotive & Heavy Machinery Corridor, Xiangyang, Hubei, China</span></li>
+                  <li><a href="mailto:sales@rootzeglobal.com"><span class="icon icon-envelope text-primary"></span><span class="text text-light" style="opacity: 0.8;" data-i18n="contact.email_val">sales@rootzeglobal.com</span></a></li>
+                  <li><a href="https://wa.me/8615168203740" target="_blank" rel="noopener"><span class="icon ion-logo-whatsapp text-primary"></span><span class="text text-light" style="opacity: 0.8;">+8615168203740</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row pt-4" style="border-top: 1px solid rgba(255,255,255,0.1);">
+          <div class="col-md-12 text-center">
+            <p class="text-light" style="opacity: 0.6; font-size: 13px;" data-i18n="footer.copyright">© 2026 襄阳如志进出口有限公司 Xiangyang Ruzhi Import & Export Co., Ltd. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.easing.1.3.js"></script>
+    <script src="./js/jquery.waypoints.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/jquery.magnific-popup.min.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="./js/jquery.animateNumber.min.js"></script>
+    <script src="./js/i18n.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

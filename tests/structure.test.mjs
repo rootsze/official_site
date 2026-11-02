@@ -4,20 +4,55 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 
-test('index.html structure contains all sections, valid relative assets, and valid i18n keys', () => {
+test('index.html structure contains official brand, 4 product sectors, about, why rootze, news link, and valid i18n keys', () => {
   const htmlPath = path.join(process.cwd(), 'index.html');
   assert.ok(fs.existsSync(htmlPath), 'index.html must exist');
   const html = fs.readFileSync(htmlPath, 'utf8');
 
-  // Verify section anchors
+  // Verify navbar & brand
   assert.match(html, /id="ftco-navbar"/, 'Navbar must exist');
+  assert.match(html, /src="\.\/images\/logo-horizontal\.png"/, 'Navbar brand must include official horizontal logo');
+  assert.match(html, /data-i18n="brand\.legal_name"/, 'Navbar brand must include company legal name i18n tag');
+
+  // Verify navigation links
+  assert.match(html, /href="#home"[^>]*data-i18n="nav\.home"/, 'Nav must link to #home');
+  assert.match(html, /href="#products"[^>]*data-i18n="nav\.products"/, 'Nav must link to #products');
+  assert.match(html, /href="#about"[^>]*data-i18n="nav\.about"/, 'Nav must link to #about');
+  assert.match(html, /href="news\.html"[^>]*data-i18n="nav\.news"/, 'Nav must link to news.html');
+  assert.match(html, /href="#contact"[^>]*data-i18n="nav\.contact"/, 'Nav must link to #contact');
+
+  // Verify Advantages and Track Record are REMOVED from top navigation
+  assert.doesNotMatch(html, /<li[^>]*class="nav-item"[^>]*>\s*<a[^>]*href="#advantages"/, 'Nav must NOT have #advantages link');
+  assert.doesNotMatch(html, /<li[^>]*class="nav-item"[^>]*>\s*<a[^>]*href="#track"/, 'Nav must NOT have #track link');
+
+  // Verify section anchors
   assert.match(html, /id="home"/, 'Home section must exist');
-  assert.match(html, /id="battery"/, 'Battery & ESS section must exist');
-  assert.match(html, /id="ev"/, 'EV section must exist');
-  assert.match(html, /id="advantages"/, 'Advantages section must exist');
-  assert.match(html, /id="track"/, 'Track metrics section must exist');
+  assert.match(html, /id="about"/, 'About section must exist');
+  assert.match(html, /id="products"/, 'Products section must exist');
+  assert.match(html, /id="advantages"/, 'Why Rootze (advantages) section must exist in body');
+  assert.match(html, /id="workflow"/, 'How We Work section must exist');
   assert.match(html, /id="contact"/, 'Contact section must exist');
   assert.match(html, /id="specModal"/, 'Product spec modal must exist');
+
+  // Verify track record section is hidden/commented out
+  assert.ok(
+    html.includes('<!-- Track record section hidden') || !html.includes('<section id="track" class="ftco-counter'),
+    'Track record counter section must not be active on page'
+  );
+
+  // Verify 4 core product cards in #products
+  assert.match(html, /data-spec-id="elec-softstarters"/, 'Card 1 (Soft starters) must exist with spec modal trigger');
+  assert.match(html, /data-spec-id="rail-track"/, 'Card 2 (Railway track equipment) must exist with spec modal trigger');
+  assert.match(html, /data-spec-id="spv-trucks"/, 'Card 3 (Special purpose vehicles) must exist with spec modal trigger');
+  assert.match(html, /data-spec-id="auto-brakelines"/, 'Card 4 (Automotive brake pad lines) must exist with spec modal trigger');
+
+  // Verify contact info and channels
+  assert.match(html, /sales@rootzeglobal\.com/, 'Official email must be sales@rootzeglobal.com');
+  assert.match(html, /\+8615168203740/, 'Official phone/whatsapp must be +8615168203740');
+  assert.match(html, /https:\/\/wa\.me\/8615168203740/, 'WhatsApp direct link must use 8615168203740');
+
+  // Verify footer white logo and legal name
+  assert.match(html, /src="\.\/images\/logo-white\.png"/, 'Footer must use white logo variant');
 
   // Verify relative links (no absolute /css or http:// localhost)
   const hrefsAndSrcs = [...html.matchAll(/(?:href|src)="([^"]+)"/g)].map(m => m[1]);
@@ -39,7 +74,7 @@ test('index.html structure contains all sections, valid relative assets, and val
   const translations = sandbox.RootZeI18n.translations.en;
 
   const i18nKeys = [...html.matchAll(/data-i18n="([^"]+)"/g)].map(m => m[1]);
-  assert.ok(i18nKeys.length > 20, 'index.html should have comprehensive data-i18n tags');
+  assert.ok(i18nKeys.length > 25, 'index.html should have comprehensive data-i18n tags');
   for (const key of i18nKeys) {
     assert.ok(translations[key], `i18n key "${key}" found in index.html is missing in i18n.js`);
   }
