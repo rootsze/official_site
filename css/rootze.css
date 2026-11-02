@@ -14,20 +14,75 @@
   letter-spacing: 1px;
   white-space: nowrap;
 }
-.navbar-brand span {
+.navbar-brand > span {
   color: var(--rootze-accent) !important;
 }
 
 /* Scrolled navbar dark text for brand */
-.ftco-navbar-light.scrolled .navbar-brand span,
-.ftco-navbar-light.scrolled .navbar-brand div span {
+.ftco-navbar-light.scrolled .navbar-brand > span {
   color: var(--rootze-dark) !important;
 }
-.ftco-navbar-light.scrolled .navbar-brand div {
-  border-color: rgba(0, 0, 0, 0.15) !important;
+
+/* Enhanced Navbar Brand Typography */
+.brand-text-wrap {
+  border-left: 2px solid rgba(255, 255, 255, 0.3) !important;
+  padding-left: 14px;
+  line-height: 1.25;
+  transition: border-color 0.3s ease;
 }
-.ftco-navbar-light.scrolled .navbar-brand div small {
-  color: var(--rootze-primary-hover) !important;
+.brand-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #ffffff !important;
+  letter-spacing: 0.4px;
+  display: block;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  transition: color 0.3s ease;
+}
+.brand-tagline {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #38bdf8 !important;
+  display: block;
+  margin-top: 2px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  transition: color 0.3s ease;
+}
+
+/* Scrolled state for enhanced brand typography */
+.ftco-navbar-light.scrolled .brand-text-wrap {
+  border-left-color: rgba(0, 0, 0, 0.16) !important;
+}
+.ftco-navbar-light.scrolled .brand-title {
+  color: #0b1329 !important;
+  text-shadow: none;
+}
+.ftco-navbar-light.scrolled .brand-tagline {
+  color: #008fae !important;
+  font-weight: 700;
+  text-shadow: none;
+}
+
+/* Responsive adjustment for laptop/smaller viewports */
+@media (max-width: 1199.98px) {
+  .brand-title {
+    font-size: 15px;
+  }
+  .brand-tagline {
+    font-size: 11.5px;
+  }
+  .brand-text-wrap {
+    padding-left: 10px;
+  }
+}
+@media (max-width: 575.98px) {
+  .brand-title {
+    font-size: 14px;
+  }
+  .brand-tagline {
+    font-size: 10.5px;
+  }
 }
 
 /* Smooth anchor offset for fixed navbar */
@@ -148,6 +203,13 @@ section {
 .services .icon {
   background: rgba(0, 180, 216, 0.1) !important;
   color: var(--rootze-primary) !important;
+  transition: all 0.3s ease;
+}
+.services .icon svg {
+  width: 44px;
+  height: 44px;
+  display: inline-block;
+  vertical-align: middle;
   transition: all 0.3s ease;
 }
 .services:hover .icon {

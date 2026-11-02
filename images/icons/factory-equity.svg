@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <g fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Sparkle Stars at top (echoing automotive heritage stars) -->
+    <path d="M200 48 L206 68 L226 74 L206 80 L200 100 L194 80 L174 74 L194 68 Z" fill="currentColor" stroke="none" />
+    <path d="M88 96 L92 110 L106 114 L92 118 L88 132 L84 118 L70 114 L84 110 Z" fill="currentColor" stroke="none" />
+
+    <!-- Factory Ground Base Line -->
+    <path d="M56 440 H456" />
+
+    <!-- Industrial Factory Building -->
+    <!-- Chimney on Left -->
+    <path d="M92 440 V184 H132 V264 L196 212 V264 L260 212 V440" />
+    <!-- Chimney Steam Puff (rounded cloud) -->
+    <path d="M112 152 C112 138 122 128 136 128 C148 128 156 136 156 146 C164 144 174 150 174 160 C174 168 166 172 154 172 H112" />
+
+    <!-- Factory Windows -->
+    <rect x="156" y="296" width="32" height="32" rx="6" />
+    <rect x="208" y="296" width="32" height="32" rx="6" />
+    
+    <!-- Factory Industrial Gate / Door -->
+    <path d="M176 440 V380 H216 V440" />
+
+    <!-- Right: Official Equity Protection Shield Badge -->
+    <path d="M372 208 C436 208 456 236 456 296 C456 384 372 440 372 440 C372 440 288 384 288 296 C288 236 308 208 372 208 Z" />
+    <!-- Checkmark inside Shield -->
+    <path d="M332 308 L360 336 L416 274" stroke-width="20" />
+    <!-- Official Star at Shield Top -->
+    <path d="M372 232 L375 242 L385 245 L375 248 L372 258 L369 248 L359 245 L369 242 Z" fill="currentColor" stroke="none" />
+  </g>
+</svg>
