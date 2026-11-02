@@ -8964,17 +8964,10 @@ h1, h2, h3, h4, h5,
   position: relative;
   z-index: 0; }
   .ftco-about:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    content: '';
-    background: #01d28e;
-    z-index: -2;
-    width: 63%; }
+    display: none; }
     @media (max-width: 767.98px) {
       .ftco-about:after {
-        width: 100%; } }
+        display: none; } }
 
 @media (max-width: 767.98px) {
   .img-2 {
