@@ -3,4 +3,5 @@ template
 resource
 docs
 .github-agent.yml
+.github-agent-state.yml
 
