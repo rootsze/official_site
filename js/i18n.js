@@ -229,7 +229,20 @@
       "footer.about_text": "Rootze operates as the authorized international export arm for an equity-partnered coalition of specialized industrial equipment, railway tools, special purpose vehicles, and automotive manufacturing lines in Xiangyang, Hubei, China.",
       "footer.quick_links": "Quick Links",
       "footer.products_title": "Product Categories",
-      "footer.copyright": "© 2026 襄阳如志进出口有限公司 Xiangyang Ruzhi Import & Export Co., Ltd. All rights reserved."
+      "footer.copyright": "© 2026 襄阳如志进出口有限公司 Xiangyang Ruzhi Import & Export Co., Ltd. All rights reserved.",
+
+      // Product catalog keys
+      "products.btn_catalog": "Explore Full Catalog",
+      "products.quick_specs": "Quick Specs",
+      "products.tech_specs_title": "Technical Specifications & Comparison",
+      "products.elec_hero_title": "Heavy-Duty Motor Starting & Power Distribution Systems",
+      "products.elec_hero_subtitle": "Authorized export arm for Shanghai Renle Science & Technology and Xiangyang Leishen Electric Manufacturing.",
+      "products.rail_hero_title": "Railway Track Maintenance Machinery & Precision Measurement Instruments",
+      "products.rail_hero_subtitle": "Authorized export arm for Wuhan Linkage Track Equipment and Xiangyang Haite Measurement & Control Technology.",
+      "products.brake_hero_title": "Automotive Brake Pad Turnkey Production Lines & Machinery",
+      "products.brake_hero_subtitle": "Direct factory-backed manufacturing lines, OE formulas, mold tooling, and on-site overseas commissioning from Zaoyang Friction Base.",
+      "products.spv_hero_title": "Commercial Utility Trucks & Specialized Transport Vehicles",
+      "products.spv_hero_subtitle": "Customized cold-chain refrigerated trucks, fluid tankers, municipal sweepers, and engineering tippers from Xiangyang Dongfeng Base."
     },
     zh: {
       "brand.name": "Rootze",
@@ -454,7 +467,20 @@
       "footer.about_text": "襄阳如志进出口有限公司（Rootze Global）依托湖北襄阳汽车与重工装备制造基地，作为多家专精特新制造厂的授权国际出口部门，为全球采购商直供高可靠工业装备与特种车辆。",
       "footer.quick_links": "快捷导航",
       "footer.products_title": "产品板块",
-      "footer.copyright": "© 2026 襄阳如志进出口有限公司 版权所有。"
+      "footer.copyright": "© 2026 襄阳如志进出口有限公司 版权所有。",
+
+      // Product catalog keys
+      "products.btn_catalog": "浏览完整目录",
+      "products.quick_specs": "快速技术规格",
+      "products.tech_specs_title": "技术参数与规格对比",
+      "products.elec_hero_title": "工业电气控制系统与重载电机起动解决方案",
+      "products.elec_hero_subtitle": "上海雷诺尔科技与襄阳雷神电气官方授权海外出口联盟，提供高低压固态软起动、变频器及成套开关补偿装置。",
+      "products.rail_hero_title": "铁路工务维保工程装备与精密轨道测控仪器",
+      "products.rail_hero_subtitle": "武汉/襄阳联动轨道设备与襄阳海特测控官方出口合作，提供高精度数显轨距仪与全系列轨道养护工程机具。",
+      "products.brake_hero_title": "汽车刹车片自动化生产线与摩擦材料成套加工装备",
+      "products.brake_hero_subtitle": "依托湖北枣阳汽车零部件与摩擦材料产业基地，提供涵盖混料、热压、外弧磨、钻孔到包装的交钥匙工程出口。",
+      "products.spv_hero_title": "商业特种专用车与特种运输改装车辆",
+      "products.spv_hero_subtitle": "依托襄阳东风商用车产业走廊，提供冷藏保温车、流体罐车、环卫扫路车及重型自卸工程车定制出口。"
     }
   };
 

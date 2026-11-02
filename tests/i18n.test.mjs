@@ -39,7 +39,13 @@ test('i18n engine has symmetric keys and exports RootZeI18n', () => {
     'workflow.title', 'workflow.subtitle',
     'workflow.step1_title', 'workflow.step2_title', 'workflow.step3_title', 'workflow.step4_title',
     'news.hero_title', 'news.hero_subtitle', 'news.filter_all',
-    'news.art1_title', 'news.art2_title', 'news.art3_title'
+    'news.art1_title', 'news.art2_title', 'news.art3_title',
+    // New catalog keys
+    'products.elec_hero_title', 'products.elec_hero_subtitle',
+    'products.rail_hero_title', 'products.rail_hero_subtitle',
+    'products.brake_hero_title', 'products.brake_hero_subtitle',
+    'products.spv_hero_title', 'products.spv_hero_subtitle',
+    'products.btn_catalog', 'products.quick_specs', 'products.tech_specs_title'
   ];
   for (const k of requiredKeys) {
     assert.ok(i18n.translations.en[k], `Missing EN key: ${k}`);
