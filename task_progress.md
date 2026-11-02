@@ -1,43 +1,36 @@
-# Task Progress: Issue #3 - [products-revamp] 从原始宣传册与主图库中提取高清封面、设备特写与流程图
+# Task Progress: Issue #4 - 修复独立产品页面的卡片排版错位、文字溢出与响应式对齐缺陷
 
 ## Status Overview
-- Total Tasks: 5
-- Completed Tasks: 5
-- Current Task: Completed (Phase 6 grill-me audit passed)
+- Total Chunks: 4
+- Completed Chunks: 4
+- Current Chunk: Completed
 
 ## Roadmap & Milestones
-- [x] Task 1: Module design & contract definitions: Visual mapping, Hero banner specs, and card specs
-- [x] Task 2: Pipeline implementation: Upgrade `scripts/extract_brochure_assets.py`
-- [x] Task 3: HTML integration: Update `products/*.html` and `src/partials-products/*.html` with authentic assets
-- [x] Task 4: Automated verification: Verify pipeline execution, 0 broken images, clean build
-- [x] Task 5: grill-me audit & stress-testing: Acceptance criteria, layout integrity
+- [x] Chunk 1: Unit tests & TDD test suite formulation (`tests/product-card-alignment.test.mjs`)
+- [x] Chunk 2: Core CSS layout rules in `css/rootze.css`
+- [x] Chunk 3: Template refactoring & build compilation (`src/partials-products/*.html` -> `products/*.html`)
+- [x] Chunk 4: Verification, full test suite pass, and `grill-me` audit
 
 ## Execution Log
-### Task 1: Module design & contract definitions
-- Executed: Formulated visual asset mapping matrix, defined standard aspect ratios (1920x600 for banners, 800x600 for cards), posted implementation task list to GitHub issue #3, and authored design specification at `docs/superpowers/specs/issue-3-extract-brochure-assets-spec.md`.
-- Verification: GitHub comment posted (comment id 6584987030), spec file created.
-- Files touched: `docs/superpowers/specs/issue-3-extract-brochure-assets-spec.md`, `task_progress.md`
+### Chunk 1: Unit tests & TDD test suite formulation
+- Executed: Formulated `tests/product-card-alignment.test.mjs` with assertions for Flexbox column, min-height baselines, spec-badge-wrap, process step cards, and table responsive properties.
+- Verification: Ran `node --test tests/product-card-alignment.test.mjs`, verified expected initial failures (Red phase).
+- Files touched: `tests/product-card-alignment.test.mjs`
 - Status: Completed
 
-### Task 2: Pipeline implementation
-- Executed: Upgraded `scripts/extract_brochure_assets.py` with multi-format rendering pipeline (Swift/PDFKit, ffmpeg video frame extraction, PIL Lanczos cropping, contrast darkening).
-- Verification: Executed `python3 scripts/extract_brochure_assets.py`, generating all 4 hero banners (1920x600) and standardized 800x600 product cards.
-- Files touched: `scripts/extract_brochure_assets.py`, `images/products/**`
+### Chunk 2: Core CSS layout rules in css/rootze.css
+- Executed: Added Flexbox `.car-wrap`, `.car-wrap .text`, `min-height: 48px` on `h2/h3`, `.spec-badge-wrap` with `min-height: 52px`, `margin-top: auto !important` on buttons, `.process-step-card` styles, and `.table-responsive` table `min-width: 680px` & cell padding.
+- Verification: Ran `node --test tests/product-card-alignment.test.mjs`, CSS test passed.
+- Files touched: `css/rootze.css`
 - Status: Completed
 
-### Task 3: HTML integration
-- Executed: Replaced template placeholder images (`image_1.jpg`, `image_4.jpg`, `image_5.jpg`, `car-1.jpg`) in `src/partials-products/{electrical,railway,brakelines,vehicles}.html`. Replaced duplicate cards in railway and special vehicles with distinct authentic equipment models. Rebuilt pages with `scripts/build.py`.
-- Verification: `grep -nE "(image_[0-9]|car-[0-9])" products/*.html` returned 0 occurrences.
+### Chunk 3: Template refactoring & build compilation
+- Executed: Standardized `.spec-badge-wrap` and `mt-auto` across `electrical.html`, `railway.html`, and `vehicles.html`. Implemented `.process-step-card` in `brakelines.html`. Added `.table-scroll-hint`. Recompiled pages via `scripts/build.py`.
+- Verification: Ran `node --test tests/*.test.mjs`, all 21 test suites passed.
 - Files touched: `src/partials-products/*.html`, `products/*.html`
 - Status: Completed
 
-### Task 4: Automated verification
-- Executed: Validated all 24 image paths in `products/*.html` and 14 image paths in root pages against filesystem with PIL image format checks.
-- Verification: 0 broken links, 100% valid files.
-- Files touched: `task_progress.md`
-- Status: Completed
-
-### Task 5: grill-me audit & stress-testing
-- Executed: Stress-tested acceptance criteria: zero placeholder images, 4 custom hero banners, standardized card ratios, repeatable generation pipeline, zero downstream scope creep.
-- Verification: 100% criteria satisfied.
+### Chunk 4: Verification, full test suite pass, and grill-me audit
+- Executed: Full project verification with `node --test tests/*.test.mjs`. Conducted `grill-me` audit across responsive viewports (375px, 768px, 1200px), equal height cards, baseline alignment, and verified zero regressions.
+- Verification: 21/21 tests passed.
 - Status: Completed
