@@ -274,7 +274,14 @@
     $('.car-wrap a[href="#contact"]').on('click', function() {
       var cat = $(this).attr('data-inquire-cat');
       if (cat) {
-        $('#inqCategory').val(cat);
+        if ($('#inqCategory option[value="' + cat + '"]').length > 0) {
+          $('#inqCategory').val(cat);
+        } else {
+          var curMsg = $('#inqMessage').val() || '';
+          if (curMsg.indexOf(cat) === -1) {
+            $('#inqMessage').val('Inquiry regarding: ' + cat + (curMsg ? '\n' + curMsg : ''));
+          }
+        }
       }
     });
 
@@ -282,13 +289,13 @@
     $('#inquiryForm').on('submit', function(e) {
       e.preventDefault();
       var form = this;
-      var name = $('#inqName').val().trim();
-      var company = $('#inqCompany').val().trim();
-      var contact = $('#inqContact').val().trim();
-      var category = $('#inqCategory').val();
-      var quantity = $('#inqQuantity').val().trim() || 'N/A';
-      var message = $('#inqMessage').val().trim() || 'No additional notes provided.';
-      var accessKey = $('#web3formsAccessKey').val().trim();
+      var name = ($('#inqName').val() || '').trim();
+      var company = ($('#inqCompany').val() || '').trim();
+      var contact = ($('#inqContact').val() || '').trim();
+      var category = $('#inqCategory').val() || 'General Inquiry';
+      var quantity = ($('#inqQuantity').val() || '').trim() || 'N/A';
+      var message = ($('#inqMessage').val() || '').trim() || 'No additional notes provided.';
+      var accessKey = ($('#web3formsAccessKey').val() || '').trim();
 
       var currentLang = (window.RootZeI18n && window.RootZeI18n.getLanguage()) || 'en';
       var payload = buildInquiryPayload(name, company, contact, category, quantity, message, currentLang);

@@ -38,24 +38,45 @@ def build_product_pages():
     foot_path = os.path.join(partials_dir, '09-footer.html')
     
     with open(head_path, 'r', encoding='utf-8') as f:
-        head = f.read()
+        head_template = f.read()
     with open(foot_path, 'r', encoding='utf-8') as f:
         foot = f.read()
 
     pages = [
-        ('electrical.html', 'electrical-systems.html'),
-        ('railway.html', 'railway-equipment.html'),
-        ('brakelines.html', 'brake-pad-lines.html'),
-        ('vehicles.html', 'special-vehicles.html'),
+        (
+            'electrical.html',
+            'electrical-systems.html',
+            'Industrial Electrical Systems — Rootze Global | 襄阳如志进出口有限公司',
+            'Factory-backed high & low-voltage soft starters, high-voltage variable frequency drives (VFD), reactive power compensation cabinets, and KYN28 switchgear from Renle and Leishen Electric.'
+        ),
+        (
+            'railway.html',
+            'railway-equipment.html',
+            'Railway Track Equipment — Rootze Global | 襄阳如志进出口有限公司',
+            'Precision digital railway track gauges, superelevation rulers, switch rail gauges, internal combustion tampers, abrasive cutters, and hydraulic adjusters from Haite and Linkage.'
+        ),
+        (
+            'brakelines.html',
+            'brake-pad-lines.html',
+            'Turnkey Brake Pad Lines — Rootze Global | 襄阳如志进出口有限公司',
+            'Complete turnkey automotive brake pad manufacturing lines, mixing, 200T-500T hot pressing, curing ovens, outer arc grinding and drilling machinery with OE friction formulas.'
+        ),
+        (
+            'vehicles.html',
+            'special-vehicles.html',
+            'Special Purpose Vehicles — Rootze Global | 襄阳如志进出口有限公司',
+            'Commercial utility and specialized vehicles: cold-chain refrigerated trucks, fluid tankers, municipal sweepers, and heavy engineering dump tippers on Dongfeng chassis.'
+        ),
     ]
 
-    for body_file, out_name in pages:
+    for body_file, out_name, title, desc in pages:
         body_path = os.path.join(partials_dir, body_file)
         body = ''
         if os.path.exists(body_path):
             with open(body_path, 'r', encoding='utf-8') as f:
                 body = f.read()
         
+        head = head_template.replace('{{PAGE_TITLE}}', title).replace('{{PAGE_DESC}}', desc)
         full_content = head + '\n' + body + '\n' + foot
         out_file = os.path.join(out_dir, out_name)
         with open(out_file, 'w', encoding='utf-8') as f:

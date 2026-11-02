@@ -17,10 +17,10 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-3 text-center text-md-left mb-2 mb-md-0">
-            <span class="badge badge-primary px-3 py-2 text-uppercase" style="letter-spacing: 0.5px;">Turnkey Engineering Hub</span>
+            <span class="badge badge-primary px-3 py-2 text-uppercase" style="letter-spacing: 0.5px;" data-i18n="catalog.turnkey_hub_badge">Turnkey Engineering Hub</span>
           </div>
-          <div class="col-md-9 text-muted" style="font-size: 14px; line-height: 1.6;">
-            Located within the <strong>Zaoyang Automotive Friction Material Base (湖北枣阳摩擦材料产业集群)</strong>, Rootze delivers end-to-end turnkey brake pad manufacturing plant solutions. From raw chemical batching to CNC dual-surface grinding, drilling, and packaging, we export machinery, mold tooling, OE formulas, and on-site technician training.
+          <div class="col-md-9 text-muted" style="font-size: 14px; line-height: 1.6;" data-i18n="products.cat4_desc">
+            Turnkey brake pad production lines and friction material manufacturing equipment: raw material mixing, multi-cavity thermal hot pressing, precision double-surface grinding, and automated packaging.
           </div>
         </div>
       </div>
@@ -31,9 +31,9 @@
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-8 text-center heading-section ftco-animate">
-            <span class="subheading" style="color: var(--rootze-primary); font-weight: 700;">Manufacturing Workflow</span>
-            <h2 class="mb-3">5-Stage Turnkey Brake Pad Production Process</h2>
-            <p class="text-muted">High-automation plant design with annual capacities ranging from 500,000 to 5,000,000 pieces.</p>
+            <span class="subheading" style="color: var(--rootze-primary); font-weight: 700;" data-i18n="catalog.overview_subheading">Manufacturing Workflow</span>
+            <h2 class="mb-3" data-i18n="catalog.brake_subheading">5-Stage Turnkey Brake Pad Production Process</h2>
+            <p class="text-muted" data-i18n="catalog.brake_desc">High-automation plant design with annual capacities ranging from 500,000 to 5,000,000 pieces.</p>
           </div>
         </div>
 
@@ -111,7 +111,7 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 mb-4 mb-lg-0 ftco-animate">
-            <span class="badge badge-primary px-3 py-1 mb-2 text-uppercase">Factory Floor Demonstration</span>
+            <span class="badge badge-primary px-3 py-1 mb-2 text-uppercase" data-i18n="catalog.turnkey_hub_badge">Turnkey Engineering Hub</span>
             <h2 class="font-weight-bold mb-3">Outer Arc Grinding & Drilling Machine in Operation</h2>
             <p class="text-muted mb-3" style="line-height: 1.7;">
               Watch actual production footage of our high-precision brake shoe and pad machining cell in Zaoyang. The machine executes automatic feeding, outer curved arc grinding, and multi-hole drilling in a continuous cycle, ensuring sub-millimeter thickness uniformity and optimal braking contact.
@@ -140,7 +140,7 @@
       <div class="container">
         <div class="row justify-content-center mb-4">
           <div class="col-md-8 text-center heading-section">
-            <span class="subheading" style="color: var(--rootze-primary); font-weight: 700;">Engineering Matrix</span>
+            <span class="subheading" style="color: var(--rootze-primary); font-weight: 700;" data-i18n="products.quick_specs">Quick Specs</span>
             <h2 class="mb-3" data-i18n="products.tech_specs_title">Technical Specifications & Comparison</h2>
           </div>
         </div>
@@ -148,12 +148,12 @@
           <table class="table table-bordered table-hover mb-0" style="font-size: 14px;">
             <thead class="thead-dark" style="background: var(--rootze-dark);">
               <tr>
-                <th>Machine Stage</th>
-                <th>Model / Type</th>
-                <th>Production Capacity</th>
-                <th>Operating Parameters</th>
-                <th>Installed Power</th>
-                <th>Automation Level</th>
+                <th data-i18n="catalog.th_stage">Machine Stage</th>
+                <th data-i18n="catalog.th_model">Model / Type</th>
+                <th data-i18n="catalog.th_capacity">Production Capacity</th>
+                <th data-i18n="catalog.th_specs">Operating Parameters</th>
+                <th data-i18n="catalog.th_rating">Installed Power</th>
+                <th data-i18n="catalog.th_features">Automation Level</th>
               </tr>
             </thead>
             <tbody>
@@ -208,46 +208,60 @@
       <div class="container">
         <div class="row justify-content-center mb-4">
           <div class="col-md-8 text-center heading-section">
-            <span class="subheading" style="color: var(--rootze-primary); font-weight: 700;">Direct Factory RFQ</span>
-            <h2 class="mb-2">Request Turnkey Line Proposal</h2>
-            <p class="text-muted">Tell us your targeted annual capacity and vehicle models for an engineering budget and layout drawing.</p>
+            <span class="subheading" style="color: var(--rootze-primary); font-weight: 700;" data-i18n="catalog.rfq_subheading">Direct Factory RFQ</span>
+            <h2 class="mb-2" data-i18n="contact.title">Request a Factory-Direct Quote</h2>
+            <p class="text-muted" data-i18n="contact.subtitle">Connect directly with our international export division and factory engineers for wholesale tier pricing, spec sheets, and delivery timelines.</p>
           </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-md-8 bg-light p-4 p-md-5 rounded shadow-sm border">
-            <form action="https://api.web3forms.com/submit" method="POST" id="inquiryForm" class="contact-form">
+            <form id="inquiryForm" class="contact-form">
               <input type="hidden" name="access_key" id="web3formsAccessKey" value="YOUR_WEB3FORMS_ACCESS_KEY">
               <input type="hidden" name="subject" value="New B2B Inquiry from Rootze Website (Brake Pad Turnkey Line)">
+              <input type="hidden" name="from_name" value="Rootze Global Web Inquiry">
+              <input type="checkbox" name="botcheck" class="d-none" style="display: none;">
+
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <label class="font-weight-bold">Full Name *</label>
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                  <label class="font-weight-bold" data-i18n="contact.form_name">Full Name</label>
+                  <input type="text" id="inqName" name="name" class="form-control" required placeholder="John Doe" data-i18n-placeholder="contact.ph_name">
                 </div>
                 <div class="col-md-6 form-group">
-                  <label class="font-weight-bold">Business Email *</label>
-                  <input type="email" name="email" class="form-control" placeholder="name@friction.com" required>
+                  <label class="font-weight-bold" data-i18n="contact.form_company">Company Name</label>
+                  <input type="text" id="inqCompany" name="company" class="form-control" required placeholder="Global Industrial Corp" data-i18n-placeholder="contact.ph_company">
                 </div>
               </div>
+
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <label class="font-weight-bold">Phone / WhatsApp</label>
-                  <input type="text" name="phone" class="form-control" placeholder="+1 ...">
+                  <label class="font-weight-bold" data-i18n="contact.form_email">Business Email / WhatsApp</label>
+                  <input type="text" id="inqContact" name="contact" class="form-control" required placeholder="sales@rootzeglobal.com / +86 151 6820 3740" data-i18n-placeholder="contact.ph_email">
                 </div>
                 <div class="col-md-6 form-group">
-                  <label class="font-weight-bold">Target Solution</label>
-                  <select name="category" class="form-control">
-                    <option value="Automotive Manufacturing Lines" selected>Turnkey Brake Pad Manufacturing Lines</option>
-                    <option value="Industrial Electrical Systems (Soft Starters)">Industrial Electrical Systems (Soft Starters)</option>
-                    <option value="Railway Track Equipment">Railway Track Equipment</option>
-                    <option value="Special Purpose Vehicles">Special Purpose Vehicles</option>
+                  <label class="font-weight-bold" data-i18n="contact.form_category">Interested Category</label>
+                  <select id="inqCategory" name="category" class="form-control custom-select">
+                    <option value="Automotive Manufacturing Lines (Brake Pads)" selected data-i18n="contact.cat_opt4">Automotive Manufacturing Lines (Brake Pads)</option>
+                    <option value="Industrial Electrical Systems (Soft Starters)" data-i18n="contact.cat_opt1">Industrial Electrical Systems (Soft Starters)</option>
+                    <option value="Railway Track Equipment & Maintenance Tools" data-i18n="contact.cat_opt2">Railway Track Equipment & Maintenance Tools</option>
+                    <option value="Special Purpose Vehicles (SPV & Trucks)" data-i18n="contact.cat_opt3">Special Purpose Vehicles (SPV & Trucks)</option>
+                    <option value="Other Custom Industrial Solutions" data-i18n="contact.cat_opt5">Other Custom Industrial Solutions</option>
                   </select>
                 </div>
               </div>
+
               <div class="form-group">
-                <label class="font-weight-bold">Annual Capacity & Factory Specifications *</label>
-                <textarea name="message" rows="4" class="form-control" placeholder="Specify targeted capacity (e.g. 1M pcs/year), brake pad types (passenger disc pads or heavy drum shoes), plant dimensions, and if formula transfer is needed..." required></textarea>
+                <label class="font-weight-bold" data-i18n="contact.form_quantity">Estimated Quantity / Delivery Country</label>
+                <input type="text" id="inqQuantity" name="quantity" class="form-control" placeholder="e.g. 1 turnkey plant (1M pcs/year)" data-i18n-placeholder="contact.ph_quantity">
               </div>
-              <button type="submit" class="btn btn-primary py-3 px-5 font-weight-bold btn-block">Submit Direct Factory Inquiry</button>
+
+              <div class="form-group">
+                <label class="font-weight-bold" data-i18n="contact.form_message">Message / Requirements</label>
+                <textarea id="inqMessage" name="message" cols="30" rows="4" class="form-control" placeholder="Specify annual targeted capacity, vehicle brake pad types, plant dimensions, and if formula transfer is needed..." data-i18n-placeholder="contact.ph_message" required></textarea>
+              </div>
+
+              <button type="submit" id="inqSubmitBtn" class="btn btn-primary py-3 px-5 font-weight-bold btn-block">
+                <span id="inqSubmitBtnText" data-i18n="catalog.rfq_btn">Submit Direct Factory Inquiry</span>
+              </button>
             </form>
           </div>
         </div>

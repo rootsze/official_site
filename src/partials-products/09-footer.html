@@ -1,3 +1,29 @@
+    <!-- Inquiry Success & Backup Dispatch Modal -->
+    <div class="modal fade" id="inquirySuccessModal" tabindex="-1" role="dialog" aria-labelledby="inquirySuccessModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header border-0 pb-0">
+            <h5 class="modal-title font-weight-bold" id="inquirySuccessModalLabel" data-i18n="contact.success_title">Inquiry Prepared Successfully!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body py-4">
+            <p class="text-muted mb-3" data-i18n="contact.success_desc">Your inquiry details have been formatted. Click below to launch your email client or chat directly on WhatsApp.</p>
+            <div class="p-3 mb-4 rounded bg-light" style="max-height: 140px; overflow-y: auto; font-size: 13px; font-family: monospace; white-space: pre-wrap;" id="modalInquirySummary"></div>
+            <div class="d-flex flex-wrap gap-2">
+              <a id="modalMailtoLink" href="#" class="btn btn-primary btn-sm py-2 px-3 mr-sm-2 mb-2"><span class="ion-ios-mail mr-1"></span> <span data-i18n="contact.modal_btn_mail">Open Email Client</span></a>
+              <a id="modalWhatsappLink" href="#" target="_blank" rel="noopener" class="btn btn-success btn-sm py-2 px-3 mr-sm-2 mb-2" style="background-color: #25d366; border-color: #25d366;"><span class="ion-logo-whatsapp mr-1"></span> <span data-i18n="contact.modal_btn_wa">Send via WhatsApp</span></a>
+              <button type="button" id="modalCopyBtn" class="btn btn-outline-secondary btn-sm py-2 px-3 mb-2"><span class="ion-ios-copy mr-1"></span> <span id="modalCopyBtnText" data-i18n="contact.modal_btn_copy">Copy Inquiry Text</span></button>
+            </div>
+          </div>
+          <div class="modal-footer border-0 pt-0">
+            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" data-i18n="modal.close">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/8615168203740?text=Hello%20Rootze%20Team%2C%20I%20am%20interested%20in%20your%20industrial%20equipment%20and%20vehicles." target="_blank" rel="noopener" class="whatsapp-float" title="Chat with Rootze Export Team on WhatsApp">
       <span class="ion-logo-whatsapp"></span>
