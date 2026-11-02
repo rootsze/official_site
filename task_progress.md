@@ -1,43 +1,43 @@
-# Task Progress: Issue #2 - 深度挖掘原始资料，建立四大产品线详尽技术参数与规格体系
+# Task Progress: Issue #3 - [products-revamp] 从原始宣传册与主图库中提取高清封面、设备特写与流程图
 
 ## Status Overview
-- Total Chunks: 5
-- Completed Chunks: 5
-- Current Chunk: Completed (All Chunks verified)
+- Total Tasks: 5
+- Completed Tasks: 5
+- Current Task: Completed (Phase 6 grill-me audit passed)
 
 ## Roadmap & Milestones
-- [x] Chunk 1: 更新工业电气页面 (`src/partials-products/electrical.html`)
-- [x] Chunk 2: 更新铁路工务页面 (`src/partials-products/railway.html`)
-- [x] Chunk 3: 更新刹车片制造整线页面 (`src/partials-products/brakelines.html`)
-- [x] Chunk 4: 更新特种专用车页面 (`src/partials-products/vehicles.html`)
-- [x] Chunk 5: 执行全站重新构建与交付验证 (`scripts/build.py`)
+- [x] Task 1: Module design & contract definitions: Visual mapping, Hero banner specs, and card specs
+- [x] Task 2: Pipeline implementation: Upgrade `scripts/extract_brochure_assets.py`
+- [x] Task 3: HTML integration: Update `products/*.html` and `src/partials-products/*.html` with authentic assets
+- [x] Task 4: Automated verification: Verify pipeline execution, 0 broken images, clean build
+- [x] Task 5: grill-me audit & stress-testing: Acceptance criteria, layout integrity
 
 ## Execution Log
-### Chunk 1: 更新工业电气页面
-- Executed: 完善 RNMV-EI、RNHV、SZBB、KYN28A-12、SZYQ4、SZPC 原厂规格参数、起动模式、保护特性与对比表
-- Files touched: src/partials-products/electrical.html
+### Task 1: Module design & contract definitions
+- Executed: Formulated visual asset mapping matrix, defined standard aspect ratios (1920x600 for banners, 800x600 for cards), posted implementation task list to GitHub issue #3, and authored design specification at `docs/superpowers/specs/issue-3-extract-brochure-assets-spec.md`.
+- Verification: GitHub comment posted (comment id 6584987030), spec file created.
+- Files touched: `docs/superpowers/specs/issue-3-extract-brochure-assets-spec.md`, `task_progress.md`
 - Status: Completed
 
-### Chunk 2: 更新铁路工务页面
-- Executed: 完善海特 GC-01/02 数显轨距尺精度指标、Linkage 内燃捣固机/切轨机动力工况与液压调整器推拉力参数
-- Files touched: src/partials-products/railway.html
+### Task 2: Pipeline implementation
+- Executed: Upgraded `scripts/extract_brochure_assets.py` with multi-format rendering pipeline (Swift/PDFKit, ffmpeg video frame extraction, PIL Lanczos cropping, contrast darkening).
+- Verification: Executed `python3 scripts/extract_brochure_assets.py`, generating all 4 hero banners (1920x600) and standardized 800x600 product cards.
+- Files touched: `scripts/extract_brochure_assets.py`, `images/products/**`
 - Status: Completed
 
-### Chunk 3: 更新刹车片制造整线页面
-- Executed: 升级 5 大工艺流程步骤参数（犁刀混料机飞刀转速、200T-500T热压排气控制、250℃连续隧道炉温区、数联磨削钻孔精度、静电喷涂防腐）及详细对比表
-- Files touched: src/partials-products/brakelines.html
+### Task 3: HTML integration
+- Executed: Replaced template placeholder images (`image_1.jpg`, `image_4.jpg`, `image_5.jpg`, `car-1.jpg`) in `src/partials-products/{electrical,railway,brakelines,vehicles}.html`. Replaced duplicate cards in railway and special vehicles with distinct authentic equipment models. Rebuilt pages with `scripts/build.py`.
+- Verification: `grep -nE "(image_[0-9]|car-[0-9])" products/*.html` returned 0 occurrences.
+- Files touched: `src/partials-products/*.html`, `products/*.html`
 - Status: Completed
 
-### Chunk 4: 更新特种专用车页面
-- Executed: 完善冷藏车（PU发泡K值、-18℃机组）、油罐车（5000L-35000L防波板/海底阀）、多功能扫路车（双发动机/15m³水尘容积）与重型自卸车（NM450 Hardox/HYVA）技术体系
-- Files touched: src/partials-products/vehicles.html
+### Task 4: Automated verification
+- Executed: Validated all 24 image paths in `products/*.html` and 14 image paths in root pages against filesystem with PIL image format checks.
+- Verification: 0 broken links, 100% valid files.
+- Files touched: `task_progress.md`
 - Status: Completed
 
-### Chunk 5: 全站重新构建与验证
-- Executed: 运行 `python3 scripts/build.py`，重新构建 `index.html`, `news.html` 及四大产品页面
-- Status: Completed (All builds succeeded, 0 errors)
-
-
-
-
-
+### Task 5: grill-me audit & stress-testing
+- Executed: Stress-tested acceptance criteria: zero placeholder images, 4 custom hero banners, standardized card ratios, repeatable generation pipeline, zero downstream scope creep.
+- Verification: 100% criteria satisfied.
+- Status: Completed
