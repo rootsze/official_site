@@ -22,13 +22,25 @@ test('README.md adheres to bilingual brand and technical documentation contracts
     'README must have Chinese top-level title'
   );
 
+  // Natural GitHub slug navigation without synthetic <a id> hacks
   assert.ok(
-    content.includes('[🇨🇳 Switch to Chinese Document / 中文版本](#-襄阳如志进出口有限公司---全球工业装备与专用汽车出海门户)'),
-    'English section must have direct markdown anchor jump to Chinese section'
+    content.includes('[🇨🇳 Switch to Chinese Document / 中文版本](#襄阳如志进出口有限公司--全球工业装备与专用汽车出海门户)'),
+    'English section must have direct markdown anchor jump to natural Chinese heading slug'
   );
   assert.ok(
     content.includes('[🌐 Back to English / 返回英文版本](#rootze-global--factory-backed-industrial--vehicle-export-portal)'),
     'Chinese section must have direct markdown anchor jump to English section'
+  );
+  assert.doesNotMatch(
+    content,
+    /<a id=["']-襄阳如志进出口有限公司/m,
+    'README must not use synthetic <a id> tags before headings'
+  );
+
+  // Automated tests badge anchor
+  assert.ok(
+    content.includes('](#3-automated-testing--quality-verification)'),
+    'Automated tests badge must target #3-automated-testing--quality-verification'
   );
 
   // 2. Corporate Identity
@@ -68,6 +80,14 @@ test('README.md adheres to bilingual brand and technical documentation contracts
   assert.ok(content.includes('scripts/build.py'), 'Must document build script scripts/build.py');
   assert.ok(content.includes('preview.sh'), 'Must document preview script preview.sh');
   assert.ok(content.includes('tests/*.test.mjs'), 'Must document automated test command');
+  assert.ok(content.includes('tests/specs-responsive.test.mjs'), 'Must accurately reference tests/specs-responsive.test.mjs');
+  assert.doesNotMatch(content, /tests\/product-specs-responsive\.test\.mjs/, 'Must not reference non-existent test file');
+
+  // Verify all explicitly listed test files exist
+  const mentionedTests = content.match(/tests\/[a-zA-Z0-9_-]+\.test\.mjs/g) || [];
+  for (const t of mentionedTests) {
+    assert.ok(fs.existsSync(path.join(root, t)), `Mentioned test file must exist on disk: ${t}`);
+  }
 
   // 7. No Obsolete Headline
   assert.doesNotMatch(

@@ -1,12 +1,12 @@
 # Rootze Global — Factory-Backed Industrial & Vehicle Export Portal
 
-[![Bilingual](https://img.shields.io/badge/Language-English%20%7C%20%E4%B8%AD%E6%96%87-blue.svg)](#-襄阳如志进出口有限公司---全球工业装备与专用汽车出海门户)
+[![Bilingual](https://img.shields.io/badge/Language-English%20%7C%20%E4%B8%AD%E6%96%87-blue.svg)](#襄阳如志进出口有限公司--全球工业装备与专用汽车出海门户)
 [![Custom Domain](https://img.shields.io/badge/Domain-rootzeglobal.com-success.svg)](https://rootzeglobal.com)
 [![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-181717.svg?logo=github)](https://rootzeglobal.com)
-[![Automated Tests](https://img.shields.io/badge/Tests-36%20Passing-brightgreen.svg)](#-automated-testing--quality-verification)
+[![Automated Tests](https://img.shields.io/badge/Tests-36%20Passing-brightgreen.svg)](#3-automated-testing--quality-verification)
 
 > **Quick Language Switch / 语言快速跳转**:  
-> 👉 [🇨🇳 Switch to Chinese Document / 中文版本](#-襄阳如志进出口有限公司---全球工业装备与专用汽车出海门户)
+> 👉 [🇨🇳 Switch to Chinese Document / 中文版本](#襄阳如志进出口有限公司--全球工业装备与专用汽车出海门户)
 
 ---
 
@@ -105,6 +105,8 @@ python3 scripts/build.py
 * `src/partials-news/` $\longrightarrow$ `news.html`
 * `src/partials-products/` $\longrightarrow$ `products/*.html`
 
+> **Developer Note on Web3Forms**: The active inquiry `access_key` is maintained in `src/partials/08-contact.html` (and catalog partials). After updating or customizing contact keys, run `python3 scripts/build.py` to compile changes into distribution pages.
+
 ### 2. One-Click Local Preview
 Launch a local development server and automatically open your default browser:
 ```bash
@@ -123,7 +125,7 @@ node --test tests/*.test.mjs
 * `tests/assets.test.mjs`: Scaffolding integrity (`.nojekyll`, CSS, JS, fonts, images).
 * `tests/i18n.test.mjs`: Complete EN/ZH key symmetry and translation validity.
 * `tests/structure.test.mjs`: Semantic sections, relative asset paths, and data-i18n attributes.
-* `tests/product-specs-responsive.test.mjs`: Mobile no-horizontal-scroll contracts and table card view.
+* `tests/specs-responsive.test.mjs`: Mobile no-horizontal-scroll contracts and table card view.
 * `tests/contact-alignment.test.mjs`: Equal-height flex contracts and bottom alignment.
 * `tests/full-audit.test.mjs`: End-to-end GitHub Pages deployment readiness.
 * `tests/readme.test.mjs`: Bilingual documentation integrity, links, and contact channels.
@@ -136,7 +138,6 @@ node --test tests/*.test.mjs
 ---
 ---
 
-<a id="-襄阳如志进出口有限公司---全球工业装备与专用汽车出海门户"></a>
 # 襄阳如志进出口有限公司 — 全球工业装备与专用汽车出海门户
 
 [![双语支持](https://img.shields.io/badge/%E8%AF%AD%E8%A8%80-%E4%B8%AD%E6%96%87%20%7C%20English-blue.svg)](#rootze-global--factory-backed-industrial--vehicle-export-portal)
@@ -245,6 +246,8 @@ python3 scripts/build.py
 * `src/partials-news/` $\longrightarrow$ 生成根目录 `news.html`
 * `src/partials-products/` $\longrightarrow$ 生成 `products/*.html` 各子目录页面
 
+> **开发者配置提示（Web3Forms 邮箱直达）**：询盘接收的 `access_key` 统一配置在 `src/partials/08-contact.html` 及各产品 Partial 中。修改接入凭据后，运行 `python3 scripts/build.py` 即可自动同步至全站页面。
+
 ### 2. 本地一键预览
 使用官方预览脚本（自动唤起默认浏览器）：
 ```bash
@@ -263,7 +266,7 @@ node --test tests/*.test.mjs
 * `tests/assets.test.mjs`：基础静态资源与 `.nojekyll` 完整性校验；
 * `tests/i18n.test.mjs`：中英文双语字典键值对等与对称性验证；
 * `tests/structure.test.mjs`：DOM 锚点、相对路径与 `data-i18n` 属性校验；
-* `tests/product-specs-responsive.test.mjs`：移动端免横向滚动与卡片化响应式契约；
+* `tests/specs-responsive.test.mjs`：移动端免横向滚动与卡片化响应式契约；
 * `tests/contact-alignment.test.mjs`：联系模块等高 Flex 弹性布局对齐校验；
 * `tests/full-audit.test.mjs`：GitHub Pages 全站部署与死链全量审计；
 * `tests/readme.test.mjs`：双语文档结构、官方主体、联系方式与超链接有效性测试。
