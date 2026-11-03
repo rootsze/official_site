@@ -37,3 +37,8 @@
 - Executed: Audited responsive contracts, mobile layout, WCAG / flex layout stability, and verified zero regressions.
 - Verification: Ready for code review.
 - Status: Completed
+
+### Fine-Tuning: Textarea Height & Submit Button Bottom Alignment
+- Executed: Increased `#inqMessage` textarea rows from 4 to 6 (`rows="6"`), assigned `.form-group-message` with `flex-grow: 1; min-height: 140px;` so the message box fills available height naturally and pushes the "Submit B2B Inquiry" button downward to align with the bottom edge of the WhatsApp card.
+- Verification: Added browser E2E test verifying exact bottom pixel alignment (`diff === 0`), 29/29 tests passed.
+- Status: Completed

@@ -689,3 +689,17 @@ section {
   justify-content: space-between;
 }
 
+/* Ensure message textarea expands harmoniously with the right-side contact card */
+.contact-section .contact-form-card .form-group-message {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.contact-section .contact-form-card .form-group-message textarea {
+  flex-grow: 1;
+  min-height: 140px;
+  resize: vertical;
+}
+
+
