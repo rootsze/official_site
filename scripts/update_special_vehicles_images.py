@@ -26,6 +26,7 @@ ASSETS = [
         'url': 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Trucks_parked_in_USA.jpg/1920px-Trucks_parked_in_USA.jpg',
         'width': 1920,
         'height': 600,
+        'crop_anchor': 'bottom',
         'dark_factor': 0.60,
         'quality': 88,
         'description': 'Commercial utility & engineering truck fleet lineup'
@@ -93,7 +94,7 @@ def ensure_source_image(asset):
         raise
 
 
-def crop_center_resize(img, target_w, target_h):
+def crop_center_resize(img, target_w, target_h, anchor='center'):
     w, h = img.size
     target_ratio = target_w / target_h
     current_ratio = w / h
@@ -104,7 +105,12 @@ def crop_center_resize(img, target_w, target_h):
         box = (offset, 0, offset + new_w, h)
     else:
         new_h = int(w / target_ratio)
-        offset = (h - new_h) // 2
+        if anchor == 'bottom':
+            offset = h - new_h
+        elif anchor == 'top':
+            offset = 0
+        else:
+            offset = (h - new_h) // 2
         box = (0, offset, w, offset + new_h)
 
     cropped = img.crop(box)
@@ -112,13 +118,21 @@ def crop_center_resize(img, target_w, target_h):
 
 
 def process_asset(asset):
-    src_path = ensure_source_image(asset)
     dst_path = os.path.join(OUTPUT_DIR, asset['filename'])
+    try:
+        src_path = ensure_source_image(asset)
+    except Exception as e:
+        if os.path.exists(dst_path) and os.path.getsize(dst_path) > 1000:
+            print(f"Warning: could not download source for {asset['filename']}, preserving existing file: {e}")
+            return
+        raise
 
     with Image.open(src_path) as im:
         if im.mode != 'RGB':
             im = im.convert('RGB')
-        resized = crop_center_resize(im, asset['width'], asset['height'])
+        resized = crop_center_resize(
+            im, asset['width'], asset['height'], anchor=asset.get('crop_anchor', 'center')
+        )
         if asset.get('dark_factor', 1.0) < 1.0:
             resized = ImageEnhance.Brightness(resized).enhance(asset['dark_factor'])
 

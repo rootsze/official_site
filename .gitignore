@@ -4,4 +4,6 @@ resource
 docs
 .github-agent.yml
 .github-agent-state.yml
+__pycache__/
+*.pyc
 

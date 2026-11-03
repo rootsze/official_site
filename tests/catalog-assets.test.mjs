@@ -33,3 +33,8 @@ test('Product catalog assets exist and meet size constraints', () => {
   assert.ok(fs.existsSync(videoPath), 'Brake line video missing');
   assert.ok(fs.statSync(videoPath).size > 10000, 'Video file empty');
 });
+
+test('Hero vehicles banner captures ground fleet subject rather than empty sky', () => {
+  const scriptContent = fs.readFileSync(path.resolve(process.cwd(), 'scripts/update_special_vehicles_images.py'), 'utf8');
+  assert.ok(scriptContent.includes("'crop_anchor': 'bottom'"), 'hero-vehicles.jpg must use bottom crop anchor to capture vehicle fleet');
+});
