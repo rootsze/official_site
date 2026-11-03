@@ -244,8 +244,8 @@
       var tableBody = '';
       for (var i = 0; i < rows.length; i++) {
         tableBody += '<tr>';
-        tableBody += '<td class="font-weight-bold" style="width: 38%; color: #334155; font-size: 13.5px;">' + rows[i][0] + '</td>';
-        tableBody += '<td style="color: #475569; font-size: 13.5px;">' + rows[i][1] + '</td>';
+        tableBody += '<td class="font-weight-bold" data-label="Parameter" style="width: 30%; color: #334155; font-size: 13.5px;">' + rows[i][0] + '</td>';
+        tableBody += '<td data-label="Value" style="color: #475569; font-size: 13.5px;">' + rows[i][1] + '</td>';
         tableBody += '</tr>';
       }
       $('#specModalTableBody').html(tableBody);
