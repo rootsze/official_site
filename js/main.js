@@ -330,34 +330,26 @@
       if (accessKey && accessKey !== 'YOUR_WEB3FORMS_ACCESS_KEY') {
         var submitBtn = $('#inqSubmitBtn');
         var submitBtnText = $('#inqSubmitBtnText');
+        var originalBtnText = submitBtnText.text();
         var sendingText = (window.RootZeI18n && window.RootZeI18n.t('contact.btn_sending')) || 'Sending...';
 
         submitBtn.prop('disabled', true);
         submitBtnText.text(sendingText);
 
-        var formData = {
-          access_key: accessKey,
-          from_name: 'Rootze Inquiry Desk',
-          subject: payload.subject,
-          name: name,
-          company: company,
-          contact: contact,
-          category: category,
-          quantity: quantity,
-          message: message
-        };
+        var formData = new FormData(form);
+        if (!formData.get('access_key') || formData.get('access_key') === 'YOUR_WEB3FORMS_ACCESS_KEY') {
+          formData.set('access_key', accessKey);
+        }
+        formData.set('subject', payload.subject);
+        formData.set('from_name', 'Rootze Global Web Inquiry');
 
         fetch('https://api.web3forms.com/submit', {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify(formData)
+          body: formData
         })
         .then(function(response) { return response.json(); })
         .then(function(data) {
-          if (data && data.success) {
+          if (data && (data.success || data.ok)) {
             // Success: Direct email delivery confirmed
             $('#inquirySuccessModalLabel').text((window.RootZeI18n && window.RootZeI18n.t('contact.sent_direct_title')) || 'Inquiry Delivered to Our Inbox!');
             $('#inquirySuccessModal .modal-body > p').text((window.RootZeI18n && window.RootZeI18n.t('contact.sent_direct_desc')) || 'Your inquiry has been delivered directly to our team inbox.');
@@ -375,8 +367,7 @@
         })
         .finally(function() {
           submitBtn.prop('disabled', false);
-          var defaultBtnText = (window.RootZeI18n && window.RootZeI18n.t('contact.send')) || 'Submit B2B Inquiry';
-          submitBtnText.text(defaultBtnText);
+          submitBtnText.text(originalBtnText);
         });
       } else {
         // Fallback for immediate operation prior to user setting their access key
