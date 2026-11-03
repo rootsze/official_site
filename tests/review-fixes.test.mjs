@@ -62,4 +62,9 @@ test('Finding 5 & 6: Localized email payload and spec modal smooth integration',
   const zhPayload = buildInquiryPayload('张总', '测试企业', 'zhang@test.com', '动力电芯', '1000', '加急交付', 'zh');
   assert.match(zhPayload.subject, /RootZe 工业装备与特种车辆业务咨询/, 'ZH subject formatted');
   assert.match(zhPayload.body, /尊敬的 RootZe 业务团队/, 'ZH body formatted in Chinese');
+
+  // Verify modal spec table Chinese terminology
+  const brakePadSpecsZh = productSpecs['auto-brakelines'].table_zh;
+  assert.ok(brakePadSpecsZh[0][1].includes('一站式交付方案'), 'brake lines spec must contain 一站式交付方案');
+  assert.ok(!brakePadSpecsZh[0][1].includes('交钥匙'), 'brake lines spec must not contain 交钥匙');
 });
