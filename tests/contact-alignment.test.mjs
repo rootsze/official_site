@@ -72,7 +72,13 @@ test('E2E Layout: Submit button bottom aligns with WhatsApp card bottom in rende
   ]);
 
   try {
-    await new Promise(r => setTimeout(r, 800));
+    for (let i = 0; i < 20; i++) {
+      await new Promise(r => setTimeout(r, 200));
+      try {
+        const res = await fetch(`http://127.0.0.1:${port}/json/version`);
+        if (res.ok) break;
+      } catch {}
+    }
     const targetUrl = `file://${path.resolve(process.cwd(), 'index.html')}`;
     const newTabRes = await fetch(`http://127.0.0.1:${port}/json/new?${targetUrl}`, { method: 'PUT' });
     const target = await newTabRes.json();

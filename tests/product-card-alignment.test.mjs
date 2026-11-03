@@ -67,3 +67,93 @@ test('Product pages and partials implement standard layout contracts', () => {
   assert.ok(brakeHtml.includes('step-title'), 'brake-pad-lines.html must contain step-title');
   assert.ok(brakeHtml.includes('table-responsive'), 'brake-pad-lines.html must have table-responsive');
 });
+
+test('Product pages hero header layout prevents text collision and overflow', async () => {
+  const cssPath = path.resolve(process.cwd(), 'css/rootze.css');
+  const css = fs.readFileSync(cssPath, 'utf-8');
+
+  // Must override .hero-wrap.hero-wrap-2 with height: auto !important and slider-text auto
+  assert.match(css, /\.hero-wrap\.hero-wrap-2\s*\{[^}]*height:\s*auto\s*!important;/s, 'hero-wrap-2 must have height: auto !important');
+  assert.match(css, /\.hero-wrap\.hero-wrap-2\s*\{[^}]*min-height:\s*360px\s*!important;/s, 'hero-wrap-2 must have min-height: 360px !important');
+  assert.match(css, /\.hero-wrap\.hero-wrap-2\s+\.slider-text\s*\{[^}]*height:\s*auto\s*!important;/s, 'slider-text must have height: auto !important');
+
+  const { spawn } = await import('node:child_process');
+  const chromePath = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+  if (!fs.existsSync(chromePath)) return;
+
+  const port = 9660 + Math.floor(Math.random() * 50);
+  const chrome = spawn(chromePath, [
+    '--headless=new',
+    `--remote-debugging-port=${port}`,
+    '--disable-gpu',
+    '--window-size=1200,900'
+  ]);
+
+  try {
+    for (let i = 0; i < 20; i++) {
+      await new Promise(r => setTimeout(r, 200));
+      try {
+        const res = await fetch(`http://127.0.0.1:${port}/json/version`);
+        if (res.ok) break;
+      } catch {}
+    }
+
+    const pages = ['electrical-systems.html', 'railway-equipment.html', 'special-vehicles.html', 'brake-pad-lines.html'];
+    for (const page of pages) {
+      const targetUrl = `file://${path.resolve(process.cwd(), 'products', page)}`;
+      const newTabRes = await fetch(`http://127.0.0.1:${port}/json/new?${targetUrl}`, { method: 'PUT' });
+      const target = await newTabRes.json();
+      const ws = new WebSocket(target.webSocketDebuggerUrl);
+      await new Promise(r => ws.onopen = r);
+
+      let id = 1;
+      function send(method, params = {}) {
+        return new Promise(resolve => {
+          const curId = id++;
+          const handler = (event) => {
+            const data = JSON.parse(event.data);
+            if (data.id === curId) {
+              ws.removeEventListener('message', handler);
+              resolve(data.result);
+            }
+          };
+          ws.addEventListener('message', handler);
+          ws.send(JSON.stringify({ id: curId, method, params }));
+        });
+      }
+
+      await send('Page.enable');
+      await send('Emulation.setDeviceMetricsOverride', { width: 1200, height: 900, deviceScaleFactor: 1, mobile: false });
+      await new Promise(r => setTimeout(r, 200));
+
+      // Switch to Chinese
+      await send('Runtime.evaluate', {
+        expression: `(() => {
+          const zhBtn = document.querySelector('.lang-btn[data-lang="zh"]');
+          if (zhBtn) zhBtn.click();
+        })()`
+      });
+      await new Promise(r => setTimeout(r, 200));
+
+      const evalRes = await send('Runtime.evaluate', {
+        expression: `(() => {
+          const hero = document.querySelector('.hero-wrap');
+          const col = hero.querySelector('.col-md-10');
+          const nextSection = document.querySelector('.hero-wrap + section');
+          return {
+            overflow: Math.round(col.getBoundingClientRect().bottom - hero.getBoundingClientRect().bottom),
+            gapToNextSection: Math.round(nextSection.getBoundingClientRect().top - col.getBoundingClientRect().bottom)
+          };
+        })()`,
+        returnByValue: true
+      });
+
+      const metrics = evalRes.result.value;
+      assert.ok(metrics.overflow <= 0, `${page} hero content must not overflow hero-wrap (got overflow: ${metrics.overflow}px)`);
+      assert.ok(metrics.gapToNextSection >= 40, `${page} gap to next section must be at least 40px (got: ${metrics.gapToNextSection}px)`);
+    }
+  } finally {
+    chrome.kill();
+  }
+});
+

@@ -702,4 +702,32 @@ section {
   resize: vertical;
 }
 
+/* ========================================================
+   Product Pages & Secondary Hero Header Alignment Fix
+   Fix height collision & text overflow into coalition section
+   ======================================================== */
+.hero-wrap.hero-wrap-2 {
+  height: auto !important;
+  min-height: 360px !important;
+  padding-top: 130px !important;
+  padding-bottom: 50px !important;
+  position: relative !important;
+}
+
+.hero-wrap.hero-wrap-2 .overlay {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+}
+
+.hero-wrap.hero-wrap-2 .slider-text {
+  height: auto !important;
+  min-height: 180px !important;
+}
+
+
 
