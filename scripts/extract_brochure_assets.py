@@ -7,6 +7,7 @@ Generates:
 - Turnkey manufacturing process equipment thumbnails and video poster
 """
 import os
+import sys
 import shutil
 import subprocess
 from PIL import Image, ImageEnhance
@@ -252,32 +253,11 @@ def process_brakelines():
 
 def process_vehicles():
     print("Processing Special Purpose Vehicles assets...")
-    veh_dir = os.path.join(IMG_DIR, 'vehicles')
-
-    src_car1 = os.path.join(BASE_DIR, 'images', 'car-1.jpg')
-    src_car2 = os.path.join(BASE_DIR, 'images', 'car-2.jpg')
-    src_car9 = os.path.join(BASE_DIR, 'images', 'car-9.jpg')
-    src_car10 = os.path.join(BASE_DIR, 'images', 'car-10.jpg')
-
-    # 1. Hero Banner (1920x600, dark_factor=0.55 for white text readability)
-    hero_dst = os.path.join(veh_dir, 'hero-vehicles.jpg')
-    crop_and_resize(src_car1, hero_dst, 1920, 600, dark_factor=0.55, quality=90)
-
-    # 2. Cold Chain Refrigerated Truck (800x600)
-    dst_refrig = os.path.join(veh_dir, 'refrigerated-truck.jpg')
-    crop_and_resize(src_car1, dst_refrig, 800, 600, quality=90)
-
-    # 3. Heavy Fuel & Water Tanker (800x600)
-    dst_tanker = os.path.join(veh_dir, 'fuel-tanker.jpg')
-    crop_and_resize(src_car2, dst_tanker, 800, 600, quality=90)
-
-    # 4. Municipal Road Sweeper & High-Pressure Jetting Truck (800x600)
-    dst_sweeper = os.path.join(veh_dir, 'sweeper-truck.jpg')
-    crop_and_resize(src_car10, dst_sweeper, 800, 600, quality=90)
-
-    # 5. Heavy-Duty Dump Tipper Truck (800x600)
-    dst_dump = os.path.join(veh_dir, 'heavy-dump-truck.jpg')
-    crop_and_resize(src_car9, dst_dump, 800, 600, quality=90)
+    veh_script = os.path.join(BASE_DIR, 'scripts', 'update_special_vehicles_images.py')
+    if os.path.exists(veh_script):
+        subprocess.run([sys.executable, veh_script], check=True)
+    else:
+        print("Notice: scripts/update_special_vehicles_images.py not found, preserving existing vehicle assets.")
 
 def main():
     print("Extracting, rendering, and optimizing brochure assets...")
