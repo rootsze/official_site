@@ -14,8 +14,11 @@ test('Product catalog assets exist and meet size constraints', () => {
     'images/products/railway/linkage-cutter.jpg',
     'images/products/brakelines/grinder-driller.jpg',
     'images/products/brakelines/video-poster.jpg',
+    'images/products/vehicles/hero-vehicles.jpg',
     'images/products/vehicles/refrigerated-truck.jpg',
-    'images/products/vehicles/fuel-tanker.jpg'
+    'images/products/vehicles/fuel-tanker.jpg',
+    'images/products/vehicles/sweeper-truck.jpg',
+    'images/products/vehicles/heavy-dump-truck.jpg'
   ];
 
   for (const img of requiredImages) {
