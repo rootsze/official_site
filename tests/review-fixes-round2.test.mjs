@@ -51,5 +51,5 @@ test('Review Fix 5: Modernized Chinese inquiry subject line without legacy new-e
 
   const { buildInquiryPayload } = sandbox.module.exports;
   const zhPayload = buildInquiryPayload('张总', '测试企业', 'zhang@test.com', '软起动柜', '5台', '加急', 'zh');
-  assert.match(zhPayload.subject, /\[RootZe 工业装备与特种车辆出口询盘\]/, 'ZH inquiry subject must reflect industrial equipment rebrand');
+  assert.match(zhPayload.subject, /\[RootZe 工业装备与特种车辆业务咨询\]/, 'ZH inquiry subject must reflect industrial equipment rebrand');
 });

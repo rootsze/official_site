@@ -60,6 +60,6 @@ test('Finding 5 & 6: Localized email payload and spec modal smooth integration',
 
   // Test ZH payload
   const zhPayload = buildInquiryPayload('张总', '测试企业', 'zhang@test.com', '动力电芯', '1000', '加急交付', 'zh');
-  assert.match(zhPayload.subject, /RootZe 工业装备与特种车辆出口询盘/, 'ZH subject formatted');
+  assert.match(zhPayload.subject, /RootZe 工业装备与特种车辆业务咨询/, 'ZH subject formatted');
   assert.match(zhPayload.body, /尊敬的 RootZe 业务团队/, 'ZH body formatted in Chinese');
 });

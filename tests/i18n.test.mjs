@@ -51,4 +51,13 @@ test('i18n engine has symmetric keys and exports RootZeI18n', () => {
     assert.ok(i18n.translations.en[k], `Missing EN key: ${k}`);
     assert.ok(i18n.translations.zh[k], `Missing ZH key: ${k}`);
   }
+
+  // Verify terminology polish in ZH translations
+  assert.equal(i18n.translations.zh['contact.sent_direct_title'], '咨询已成功送达负责人邮箱！');
+  assert.ok(i18n.translations.zh['products.cat4_desc'].includes('一站式交付'), 'cat4_desc must use 一站式交付');
+  assert.ok(!i18n.translations.zh['products.cat4_desc'].includes('交钥匙汽车刹车片'), 'cat4_desc must not contain 交钥匙汽车刹车片');
+  assert.ok(i18n.translations.zh['workflow.step2_desc'].includes('原厂出厂价'), 'workflow.step2_desc must use 原厂出厂价');
+  assert.ok(!i18n.translations.zh['workflow.step2_desc'].includes('出水价'), 'workflow.step2_desc must not contain 出水价');
+  assert.ok(i18n.translations.zh['why.card1_desc'].includes('原厂直供价'), 'why.card1_desc must use 原厂直供价');
+  assert.ok(!i18n.translations.zh['why.card1_desc'].includes('裸价'), 'why.card1_desc must not contain 裸价');
 });
