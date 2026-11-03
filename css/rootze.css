@@ -671,3 +671,21 @@ section {
   color: #f8fafc;
 }
 
+/* ========================================================
+   Contact Section Equal-Height & Flex Alignment (Issue #6)
+   ======================================================== */
+.contact-section .contact-form-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.contact-section .contact-info-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+}
+
