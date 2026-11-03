@@ -35,16 +35,16 @@
     },
     'art3': {
       category_en: 'Turnkey Solutions',
-      category_zh: '交钥匙产线',
+      category_zh: '一站式产线交付',
       date_en: 'October 20, 2026',
       date_zh: '2026年10月20日',
       title_en: 'Turnkey Export: Establishing an Automated Automotive Brake Pad Production Line Abroad',
-      title_zh: '交钥匙工程：如何在海外快速搭建一条年产数百万套的汽车刹车片全自动生产线',
+      title_zh: '一站式交付工程：如何在海外快速搭建一条年产数百万套的汽车刹车片全自动生产线',
       body_en: '<p>Rising tariffs, shipping costs, and localized industrialization mandates are driving global automotive aftermarket distributors to establish domestic friction material manufacturing facilities. However, building an automotive brake pad plant requires synchronized integration across disparate engineering disciplines: formula chemistry, raw material mixing, thermal compression, CNC grinding, and powder coating.</p>' +
         '<p>Rootze leverages Xiangyang\'s automotive component manufacturing heritage—anchored in the Dongfeng automotive corridor—to deliver complete turnkey brake pad production solutions. We supply the entire equipment workflow from automated micro-loss loss-in-weight batching systems and high-speed plough mixers to multi-cavity automated hot-press molding machines (200T-600T), mesh belt curing ovens, and dual-head outer arc CNC grinding stations.</p>' +
         '<p>Beyond machinery, Rootze provides essential intellectual property transfer: proven friction formulas (ceramic, low-metallic, semi-metallic), custom steel back stamping molds, factory floor layout blueprints, dust extraction and ISO/TS 16949 compliant quality assurance protocols, backed by on-site overseas installation and commissioning engineers.</p>',
       body_zh: '<p>面对日益上涨的国际海运成本、关税壁垒以及海外多国对本土工业制造的政策支持，越来越多的海外汽车零部件贸易商与主机厂配套商希望在本地投资建设汽车摩擦材料（刹车片）组装与生产工厂。然而，刹车片制造涉及配方化学混料、高温热压成型、高精磨削与表面防腐等跨专业工序，单一采购单机设备极易出现工艺脱节与良品率低下。</p>' +
-        '<p>依托湖北襄阳深厚的汽车零部件全产业链集群底蕴（中国著名东风轻型车与商用车制造基地），Rootze 为海外投资客户提供从厂房规划、配料混料、热压固化、精密研磨到自动化包装的“交钥匙工程（Turnkey Solution）”。整线年产能可按需定制（年产 50 万片、100 万片、300 万片至 500 万片）。</p>' +
+        '<p>依托湖北襄阳深厚的汽车零部件全产业链集群底蕴（中国著名东风轻型车与商用车制造基地），Rootze 为海外投资客户提供从厂房规划、配料混料、热压固化、精密研磨到自动化包装的“一站式交付工程（Turnkey Solution）”。整线年产能可按需定制（年产 50 万片、100 万片、300 万片至 500 万片）。</p>' +
         '<p>除了提供重载犁刀干混机、多模腔自动化热压机、隧道式后固化烘箱与数控双端外弧磨床等全套智能设备外，Rootze 更提供极具价值的核心技术输出：成熟的高性能陶瓷配方、少金属与半金属摩擦工艺、全套冷热压精密模具，并派遣资深工程技师团队赴海外进行现场安装调试与工人实操培训，确保工厂投产即达标。</p>'
     }
   };

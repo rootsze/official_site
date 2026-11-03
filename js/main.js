@@ -106,7 +106,7 @@
         ['Standards & Turnkey Svc', 'ISO/TS 16949 / IATF 16949 Standards, Factory Floor Layout Design, Commissioning']
       ],
       table_zh: [
-        ['整线年产能设计', '提供年产 50 万片、100 万片、300 万片至 500 万片交钥匙交钥匙工程方案'],
+        ['整线年产能设计', '提供年产 50 万片、100 万片、300 万片至 500 万片一站式交付方案'],
         ['配料与混料工段', '高精度多组份失重式自动计量配料系统 + 重载高速多犁刀强制干混机'],
         ['热压成型单元', '多工位自动液压热压成型机组（单机 200T - 600T 吨位，多模腔自动模内推料）'],
         ['热处理固化烘道', '网带式连续高温后固化隧道烘箱（200°C - 300°C 均衡控温，消除内部应力）'],
@@ -382,7 +382,7 @@
     var isZh = (lang === 'zh');
 
     var subject = isZh
-      ? '[RootZe 工业装备与特种车辆出口询盘] ' + category + ' — ' + company
+      ? '[RootZe 工业装备与特种车辆业务咨询] ' + category + ' — ' + company
       : '[RootZe Industrial Equipment Inquiry] ' + category + ' — ' + company;
 
     var body = isZh
