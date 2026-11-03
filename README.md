@@ -13,7 +13,7 @@
 ## 🌐 Official Website & Live Portal
 
 * **Official Domain**: [https://rootzeglobal.com](https://rootzeglobal.com)
-* **Corporate Entity**: Xiangyang Ruzhi Import & Export Co., Ltd. (襄阳如志进出口有限公司)
+* **Corporate Entity**: Xiangyang Rootze Import & Export Co., Ltd. (襄阳如志进出口有限公司)
 * **Brand Name**: **Rootze Global** (如志全球)
 * **Headquarters & Industrial Hub**: Xiangyang, Hubei Province, China — the central manufacturing corridor for Dongfeng commercial vehicles and high-end machinery.
 
@@ -21,7 +21,7 @@
 
 ## 🏢 Corporate Background & Supply Model
 
-**Rootze Global** (Xiangyang Ruzhi Import & Export Co., Ltd.) is an equity-backed direct export arm established for specialized industrial equipment and commercial vehicle manufacturers in Central China. 
+**Rootze Global** (Xiangyang Rootze Import & Export Co., Ltd.) is an equity-backed direct export arm established for specialized industrial equipment and commercial vehicle manufacturers in Central China. 
 
 Unlike conventional trading middlemen, Rootze operates with direct manufacturer equity alignment, providing global B2B procurement managers, EPC contractors, and international distributors with:
 1. **Factory-Direct Pricing**: Direct access to top-tier manufacturing cost baselines without multi-layered intermediary markups.
@@ -154,7 +154,7 @@ node --test tests/*.test.mjs
 
 * **官方独立域名**：[https://rootzeglobal.com](https://rootzeglobal.com)
 * **企业主体全称**：**襄阳如志进出口有限公司**
-* **英文名称 / 国际品牌**：**Xiangyang Ruzhi Import & Export Co., Ltd. / Rootze Global**
+* **英文名称 / 国际品牌**：**Xiangyang Rootze Import & Export Co., Ltd. / Rootze Global**
 * **总部与产业基地**：中国·湖北省襄阳市 —— 国家级东风商用车产业基地与华中高端智能制造走廊。
 
 ---

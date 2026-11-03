@@ -8,7 +8,7 @@
   var translations = {
     en: {
       "brand.name": "Rootze",
-      "brand.legal_name": "Xiangyang Ruzhi Import & Export Co., Ltd.",
+      "brand.legal_name": "Xiangyang Rootze Import & Export Co., Ltd.",
       "brand.tagline": "Factory-Backed Industrial Equipment & Special Purpose Vehicles",
 
       "nav.home": "Home",
@@ -229,7 +229,7 @@
       "footer.about_text": "Rootze operates as the authorized international export arm for an equity-partnered coalition of specialized industrial equipment, railway tools, special purpose vehicles, and automotive manufacturing lines in Xiangyang, Hubei, China.",
       "footer.quick_links": "Quick Links",
       "footer.products_title": "Product Categories",
-      "footer.copyright": "© 2026 襄阳如志进出口有限公司 Xiangyang Ruzhi Import & Export Co., Ltd. All rights reserved.",
+      "footer.copyright": "© 2026 襄阳如志进出口有限公司 Xiangyang Rootze Import & Export Co., Ltd. All rights reserved.",
 
       // Product catalog keys
       "products.btn_catalog": "Explore Full Catalog",

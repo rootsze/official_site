@@ -44,7 +44,7 @@ test('README.md adheres to bilingual brand and technical documentation contracts
   );
 
   // 2. Corporate Identity
-  assert.ok(content.includes('Xiangyang Ruzhi Import & Export Co., Ltd.'), 'English company name must be present');
+  assert.ok(content.includes('Xiangyang Rootze Import & Export Co., Ltd.'), 'English company name must be present');
   assert.ok(content.includes('襄阳如志进出口有限公司'), 'Chinese company name must be present');
   assert.ok(content.includes('Rootze Global'), 'Brand name Rootze Global must be present');
 
