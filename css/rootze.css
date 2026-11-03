@@ -378,7 +378,133 @@ section {
 }
 @media (max-width: 767.98px) {
   .table-scroll-hint {
-    display: block;
+    display: none !important;
+  }
+}
+
+/* Product Spec Modal Fluid & Responsive Styling (Zero Horizontal Scroll) */
+#specModal .modal-body {
+  padding: 24px 20px;
+}
+#specModal .table-responsive {
+  overflow-x: visible !important;
+  box-shadow: none;
+  background: transparent;
+}
+#specModal .table-responsive table,
+.spec-modal-table {
+  min-width: 0 !important;
+  width: 100% !important;
+  table-layout: fixed;
+  margin-bottom: 0;
+}
+.spec-modal-table td {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  vertical-align: middle;
+}
+
+/* Product Catalog Comparison Tables & Zero-Scroll Card Stack */
+.catalog-specs-table {
+  min-width: 100% !important;
+  width: 100% !important;
+  margin-bottom: 0;
+}
+
+/* Mobile Responsive Specs (<768px) */
+@media (max-width: 767.98px) {
+  /* Spec Modal Mobile Stacked Cards */
+  .spec-modal-table thead {
+    display: none;
+  }
+  .spec-modal-table,
+  .spec-modal-table tbody,
+  .spec-modal-table tr,
+  .spec-modal-table td {
+    display: block !important;
+    width: 100% !important;
+  }
+  .spec-modal-table tr {
+    margin-bottom: 12px;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 8px;
+    background: #f8fafc;
+    padding: 10px 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  }
+  .spec-modal-table td {
+    border: none !important;
+    padding: 3px 0 !important;
+  }
+  .spec-modal-table td:first-child {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    color: var(--rootze-navy, #0f2744) !important;
+    padding-bottom: 4px !important;
+    border-bottom: 1px dashed #cbd5e1 !important;
+    margin-bottom: 6px;
+  }
+  .spec-modal-table td:last-child {
+    font-size: 13.5px !important;
+    color: #334155 !important;
+    line-height: 1.6;
+  }
+
+  /* Catalog Comparison Table Mobile Card Transform */
+  .catalog-specs-table thead {
+    display: none;
+  }
+  .catalog-specs-table,
+  .catalog-specs-table tbody,
+  .catalog-specs-table tr,
+  .catalog-specs-table td {
+    display: block !important;
+    width: 100% !important;
+  }
+  .catalog-specs-table tr {
+    margin-bottom: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    padding: 14px 16px;
+    overflow: hidden;
+  }
+  .catalog-specs-table td {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 8px 0 !important;
+    border: none !important;
+    border-bottom: 1px dashed #edf2f7 !important;
+    font-size: 13.5px;
+    text-align: right;
+  }
+  .catalog-specs-table td:last-child {
+    border-bottom: none !important;
+  }
+  .catalog-specs-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #64748b;
+    font-size: 12.5px;
+    text-align: left;
+    margin-right: 12px;
+    flex-shrink: 0;
+  }
+  .catalog-specs-table td:first-child {
+    display: block !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: var(--rootze-navy, #0f2744) !important;
+    background: #f1f5f9;
+    margin: -14px -16px 10px !important;
+    padding: 12px 16px !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    text-align: left !important;
+  }
+  .catalog-specs-table td:first-child::before {
+    display: none !important;
   }
 }
 
