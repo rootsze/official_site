@@ -156,6 +156,28 @@ section {
   }
 }
 
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    font-size: 13.5px !important;
+  }
+  .ftco-navbar-light .navbar-nav > .nav-item.cta {
+    margin-left: 8px !important;
+  }
+  .ftco-navbar-light .navbar-nav > .nav-item.cta .btn {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    font-size: 13px !important;
+  }
+  .lang-switch {
+    margin-left: 8px;
+  }
+  .lang-btn {
+    padding: 3px 8px;
+  }
+}
+
 @media (min-width: 1200px) {
   .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
     padding-left: 16px !important;
@@ -171,6 +193,7 @@ section {
 .lang-switch {
   display: inline-flex;
   align-items: center;
+  flex-shrink: 0;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
@@ -178,6 +201,11 @@ section {
   margin-left: 15px;
 }
 .lang-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap !important;
+  flex-shrink: 0;
   background: transparent;
   border: none;
   color: #e2e8f0;
