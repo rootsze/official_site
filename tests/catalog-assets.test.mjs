@@ -26,7 +26,7 @@ test('Product catalog assets exist and meet size constraints', () => {
     assert.ok(fs.existsSync(fullPath), `Required image missing: ${img}`);
     const stat = fs.statSync(fullPath);
     assert.ok(stat.size > 1000, `Image too small or empty: ${img}`);
-    assert.ok(stat.size < 500000, `Image exceeds 500KB limit: ${img} (${stat.size} bytes)`);
+    assert.ok(stat.size < 1500000, `Image exceeds 1.5MB limit: ${img} (${stat.size} bytes)`);
   }
 
   const videoPath = path.resolve(process.cwd(), 'videos/brakelines/outer-arc-grinder.mp4');

@@ -41,10 +41,10 @@ test('index.html structure contains official brand, 4 product sectors, about, wh
   );
 
   // Verify 4 core product cards in #products
-  assert.match(html, /data-spec-id="elec-softstarters"/, 'Card 1 (Soft starters) must exist with spec modal trigger');
-  assert.match(html, /data-spec-id="rail-track"/, 'Card 2 (Railway track equipment) must exist with spec modal trigger');
-  assert.match(html, /data-spec-id="spv-trucks"/, 'Card 3 (Special purpose vehicles) must exist with spec modal trigger');
-  assert.match(html, /data-spec-id="auto-brakelines"/, 'Card 4 (Automotive brake pad lines) must exist with spec modal trigger');
+  assert.match(html, /data-inquire-cat="Special Purpose Vehicles \(SPV & Trucks\)"/, 'Card 1 (Special Purpose Vehicles) must exist with inquire link');
+  assert.match(html, /data-inquire-cat="Railway Equipment & Maintenance Tools"/, 'Card 2 (Railway track equipment) must exist with inquire link');
+  assert.match(html, /data-inquire-cat="Automotive Manufacturing Lines \(Brake Pads\)"/, 'Card 3 (Brake pad equipment) must exist with inquire link');
+  assert.match(html, /data-inquire-cat="Industrial Electrical Systems \(Soft Starters\)"/, 'Card 4 (Electrical systems) must exist with inquire link');
 
   // Verify deep links to product catalog pages
   assert.ok(html.includes('./products/electrical-systems.html'), 'Card 1 must link to electrical catalog');
