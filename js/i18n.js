@@ -25,7 +25,7 @@
       "nav.track": "Track Record",
 
       "hero.badge": "Factory-Backed Export Coalition • Xiangyang Heavy Industry",
-      "hero.title": "Your Direct Factory-Backed Supplying Partner for Industrial Equipment & Vehicles in Central China",
+      "hero.title": "Your Direct Factory-Backed Supplying Partner",
       "hero.subtitle": "Connecting global buyers directly with equity-partnered manufacturers for factory-direct pricing, custom engineering, and reliable supply.",
       "hero.feature1": "Direct Factory Equity & Zero Markup",
       "hero.feature2": "OEM Technical & Engineering Access",
@@ -488,7 +488,7 @@
       "nav.track": "实力指标",
 
       "hero.badge": "工厂股权直连 • 湖北襄阳重工制造集群",
-      "hero.title": "依托中国中部制造重镇，工厂股权直连的工业装备与特种车辆出海合作伙伴",
+      "hero.title": "工厂股权直连的出海供应合作伙伴",
       "hero.subtitle": "直连中国中部（襄阳）参股制造企业，提供原厂直供价格、专属工程定制支持与长效供应保障。",
       "hero.feature1": "工厂股权直联 无中间商溢价",
       "hero.feature2": "原厂总工程师团队直接技术支持",
