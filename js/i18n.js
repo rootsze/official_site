@@ -122,7 +122,7 @@
       "ev.fleet_desc": "Factory allocation and engineering adaptation guarantees for international operators.",
 
       // Why Rootze
-      "why.title": "Why Global Buyers Choose Rootze",
+      "why.title": "Why Rootze",
       "why.subtitle": "Eliminating middlemen through direct factory equity, engineering access, and consolidated supply chain management.",
       "why.card1_title": "Direct Factory Equity & Exclusive Arm",
       "why.card1_desc": "As the equity-backed export division for our partner manufacturers, we offer true factory-direct pricing without extra distributor markups.",
@@ -597,7 +597,7 @@
       "ev.fleet_desc": "针对出租车网络、公共出行与企业车队，提供批量工厂配额保障与定制化零配件海外保障方案。",
 
       // Why Rootze
-      "why.title": "全球采购商为何选择如志",
+      "why.title": "为何选择如志",
       "why.subtitle": "以工厂股权与技术直联为基石，彻底剔除中间差价，提供全流程高可靠出海支持。",
       "why.card1_title": "工厂股权投资与独家出口代表",
       "why.card1_desc": "作为合伙制造工厂的直属股权出海部门，提供真正原厂直供价，彻底杜绝多层贸易商层层加价。",
