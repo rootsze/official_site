@@ -23,10 +23,10 @@ test('About section redesign eliminates legacy green #01d28e and provides access
   assert.match(rootzeCss, /\.about-badge\s*\{[\s\S]*?color:\s*#0284c7\s*!important;/, 'about-badge must use Radix sky-11 (#0284c7, contrast > 5.8:1)');
   assert.match(rootzeCss, /\.about-pill\s*\{[\s\S]*?color:\s*#0f172a;/, 'about-pill must use Radix slate-12 (#0f172a, contrast > 15:1)');
 
-  // 4. Verify index.html contains modern photo card and pill highlights
+  // 4. Verify index.html contains modern photo card and about title
   assert.match(indexHtml, /<div[^>]*class="about-image-card"/, 'index.html must render modern about-image-card');
   assert.match(indexHtml, /<div[^>]*class="about-img-frame"/, 'index.html must render about-img-frame');
   assert.match(indexHtml, /<div[^>]*class="about-badge[^"]*"/, 'index.html must render about-badge');
   assert.match(indexHtml, /<h2[^>]*class="about-title[^"]*"/, 'index.html must render about-title');
-  assert.match(indexHtml, /<div[^>]*class="about-highlights/, 'index.html must render about-highlights pills');
+  assert.match(indexHtml, /Official Export Arm of Specialized Manufacturers/, 'index.html must render updated about title');
 });

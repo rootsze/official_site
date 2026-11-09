@@ -48,7 +48,7 @@
       "subheading.track": "Global Presence",
 
       // About Us
-      "about.title": "Authorized International Export Arm for Specialized Makers",
+      "about.title": "Official Export Arm of Specialized Manufacturers",
       "about.subtitle": "Based in Hubei Province—the core of Central China's heavy machinery and automotive components hub—Rootze bridges specialized makers directly with overseas buyers.",
       "about.body1": "Based in Hubei Province—the core of Central China’s heavy machinery and automotive components hub (anchored by Xiangyang's legendary manufacturing roots)—Rootze operates as the authorized international export division for a coalition of specialized local manufacturers.",
       "about.body2": "Backed by direct factory equity investments and exclusive overseas representation agreements, Rootze eliminates unnecessary intermediaries. We bring passionate, specialized local makers directly to the global stage. Overseas buyers gain the exact benefits of dealing directly with factory engineers, combined with streamlined international export management.",
