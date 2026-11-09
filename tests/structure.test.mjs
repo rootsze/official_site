@@ -34,6 +34,7 @@ test('index.html structure contains official brand, 4 product sectors, about, wh
   assert.doesNotMatch(html, /data-i18n="subheading\.why"/, 'Why Rootze section must not have duplicate subheading');
   assert.doesNotMatch(html, /data-i18n="why\.subtitle"/, 'Why Rootze section must not have subtitle description');
   assert.match(html, /id="workflow"/, 'How We Work section must exist');
+  assert.doesNotMatch(html, /data-i18n="subheading\.workflow"/, 'How We Work section must not have duplicate subheading');
   assert.match(html, /id="contact"/, 'Contact section must exist');
   assert.match(html, /id="specModal"/, 'Product spec modal must exist');
 

@@ -413,9 +413,10 @@
 
     var mailtoUrl = 'mailto:sales@rootzeglobal.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
 
+    var waQuantity = (quantity && quantity !== 'N/A') ? (isZh ? '（采购量：' + quantity + '）' : ' (' + quantity + ')') : '';
     var waMsg = isZh
-      ? '您好 Rootze 团队，我是来自 ' + company + ' 的 ' + name + '。希望咨询关于 ' + category + '（采购量：' + quantity + '）的原厂出口方案。'
-      : 'Hello Rootze Team, I am ' + name + ' from ' + company + '. Inquiring about factory-direct supply for ' + category + ' (' + quantity + ').';
+      ? '您好 Rootze 团队，我是来自 ' + company + ' 的 ' + name + '。希望咨询关于 ' + category + waQuantity + ' 的原厂出口方案。'
+      : 'Hello Rootze Team, I am ' + name + ' from ' + company + '. Inquiring about factory-direct supply for ' + category + waQuantity + '.';
 
     var waUrl = 'https://wa.me/8615168203740?text=' + encodeURIComponent(waMsg);
 

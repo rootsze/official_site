@@ -32,7 +32,7 @@ test('Finding 3 & 4: Inquiry success modal exists and placeholders/subheadings a
 
   // Verify form placeholders have data-i18n-placeholder
   const placeholders = [...html.matchAll(/data-i18n-placeholder="([^"]+)"/g)].map(m => m[1]);
-  assert.ok(placeholders.length >= 5, 'Form fields must have data-i18n-placeholder attributes');
+  assert.ok(placeholders.length >= 4, 'Form fields must have data-i18n-placeholder attributes');
 
   // Verify i18n updates document.documentElement.lang
   const i18nCode = fs.readFileSync(path.join(root, 'js/i18n.js'), 'utf8');

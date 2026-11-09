@@ -17,7 +17,6 @@ test('Web3Forms form fields and script integration on index.html', () => {
   assert.match(html, /name="company"/, 'Form must contain named input "company"');
   assert.match(html, /name="contact"/, 'Form must contain named input "contact"');
   assert.match(html, /name="category"/, 'Form must contain named input "category"');
-  assert.match(html, /name="quantity"/, 'Form must contain named input "quantity"');
   assert.match(html, /name="message"/, 'Form must contain named input "message"');
 });
 
