@@ -60,4 +60,14 @@ test('i18n engine has symmetric keys and exports RootZeI18n', () => {
   assert.ok(!i18n.translations.zh['workflow.step2_desc'].includes('出水价'), 'workflow.step2_desc must not contain 出水价');
   assert.ok(i18n.translations.zh['why.card1_desc'].includes('原厂直供价'), 'why.card1_desc must use 原厂直供价');
   assert.ok(!i18n.translations.zh['why.card1_desc'].includes('裸价'), 'why.card1_desc must not contain 裸价');
+  // Verify streamlined contact form labels and project requirements copy
+  assert.equal(i18n.translations.en['contact.form_name'], 'Name');
+  assert.equal(i18n.translations.en['contact.form_company'], 'Company');
+  assert.equal(i18n.translations.en['contact.form_message'], 'Tell us about your project requirements ...');
+  assert.equal(i18n.translations.en['contact.ph_message'], 'Tell us about your project. Our engineering team will review your requirements and get back to you within 12 business hours.');
+
+  assert.equal(i18n.translations.zh['contact.form_name'], '姓名');
+  assert.equal(i18n.translations.zh['contact.form_company'], '企业名称');
+  assert.equal(i18n.translations.zh['contact.form_message'], '请告诉我们您的项目需求...');
+  assert.equal(i18n.translations.zh['contact.ph_message'], '请告诉我们您的项目需求，我们的工程师团队将在 12 个工作小时内为您评估并回复。');
 });
