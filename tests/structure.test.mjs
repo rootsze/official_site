@@ -95,3 +95,21 @@ test('index.html structure contains official brand, 4 product sectors, about, wh
     assert.ok(translations[key], `i18n key "${key}" found in index.html is missing in i18n.js`);
   }
 });
+
+test('Inquiry form labels and requirements placeholder are streamlined across index and product pages', () => {
+  const pages = [
+    'index.html',
+    'products/electrical-systems.html',
+    'products/railway-equipment.html',
+    'products/brake-pad-lines.html',
+    'products/special-vehicles.html'
+  ];
+
+  for (const page of pages) {
+    const pageHtml = fs.readFileSync(path.join(process.cwd(), page), 'utf8');
+    assert.match(pageHtml, /<label[^>]*data-i18n="contact\.form_name"[^>]*>Name<\/label>/, `${page} must display Name label`);
+    assert.match(pageHtml, /<label[^>]*data-i18n="contact\.form_company"[^>]*>Company<\/label>/, `${page} must display Company label`);
+    assert.match(pageHtml, /<label[^>]*data-i18n="contact\.form_message"[^>]*>Tell us about your project requirements \.\.\.<\/label>/, `${page} must display streamlined project requirements label`);
+    assert.match(pageHtml, /placeholder="Tell us about your project\. Our engineering team will review your requirements and get back to you within 12 business hours\."[^>]*data-i18n-placeholder="contact\.ph_message"/, `${page} must display turnaround promise in textarea placeholder`);
+  }
+});
