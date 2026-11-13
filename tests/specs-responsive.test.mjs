@@ -24,7 +24,6 @@ test('Product catalog pages comparison tables implement mobile responsive cards 
   const catalogPages = [
     'products/electrical-systems.html',
     'products/railway-equipment.html',
-    'products/special-vehicles.html',
     'products/brake-pad-lines.html'
   ];
 

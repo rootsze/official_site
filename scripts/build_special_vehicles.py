@@ -656,7 +656,7 @@ def build_main_catalog_section(parsed_products):
               </div>
             </div>
           </div>
-          <div id="{cat['collapse_id']}" class="collapse {is_show}" aria-labelledby="{cat['heading_id']}" data-parent="#spvAccordion">
+          <div id="{cat['collapse_id']}" class="collapse {is_show}" aria-labelledby="{cat['heading_id']}">
             <div class="card-body p-3 p-md-4 bg-light">
               <div class="row">
 {cards_html}              </div>
