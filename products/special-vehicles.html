@@ -108,170 +108,1058 @@
       </div>
     </section>
 
-    <!-- Product Showcase Grid -->
-    <section class="ftco-section bg-light py-5">
+        <!-- Product Showcase Catalog Accordion (Plan B) -->
+    <section class="ftco-section bg-light py-5" id="catalog-section">
       <div class="container">
         <div class="row justify-content-center mb-5">
-          <div class="col-md-8 text-center heading-section ftco-animate">
-            <span class="subheading" style="color: var(--rootze-primary); font-weight: 700;" data-i18n="catalog.overview_subheading">Catalog Overview</span>
-            <h2 class="mb-3" data-i18n="catalog.spv_subheading">Commercial Utility & Engineering Truck Fleet</h2>
-            <p class="text-muted" data-i18n="catalog.spv_desc">Built on heavy-duty commercial chassis with ISO and CCC export certifications for logistics, mining, and municipal services.</p>
+          <div class="col-md-9 text-center heading-section ftco-animate">
+            <span class="subheading" style="color: var(--rootze-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Factory Direct Product Matrix</span>
+            <h2 class="mb-3">Commercial Special Purpose Vehicles & Fleet Catalog</h2>
+            <p class="text-muted">Export-certified special utility and transport vehicles engineered on Dongfeng, Auman, Howo, and Sitrak chassis. Click on any category to browse our 28 models, or view individual product pages for complete specifications.</p>
           </div>
         </div>
 
-        <div class="row">
-          <!-- Item 1: Cold Chain Refrigerated Truck -->
-          <div class="col-md-6 col-lg-3 mb-4 ftco-animate">
-            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
-              <div class="img rounded-top d-flex align-items-end" style="background-image: url('../images/products/vehicles/refrigerated-truck.jpg'); height: 220px; background-size: cover; background-position: center;"></div>
-              <div class="text p-4 d-flex flex-column flex-grow-1">
-                <span class="badge badge-info mb-2 align-self-start" data-i18n="catalog.spv.badge_cold">Cold-Chain Logistics</span>
-                <h3 class="font-weight-bold mb-2" style="font-size: 17px;" data-i18n="catalog.spv.p1_title">Dongfeng Refrigerated Box Truck</h3>
-                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
-                  <span class="spec-badge" data-i18n="catalog.spv.p1_b1">3T - 18T Payload</span>
-                  <span class="spec-badge" data-i18n="catalog.spv.p1_b2">-18&deg;C ~ -25&deg;C Freeze</span>
-                  <span class="spec-badge" data-i18n="catalog.spv.p1_b3">K &le; 0.40 W/(m&sup2;&middot;K)</span>
-                  <span class="spec-badge" data-i18n="catalog.spv.p1_b4">Carrier / Thermo King</span>
+        <div class="accordion" id="spvAccordion">
+        <!-- Category Item: Fuel & Fluid Tanker Trucks -->
+        <div class="card mb-3 border-0 shadow-sm rounded overflow-hidden">
+          <div class="card-header bg-white py-3 px-4 border-bottom-0 " id="heading-tanker-trucks" style="cursor: pointer;" data-toggle="collapse" data-target="#collapse-tanker-trucks" aria-expanded="true" aria-controls="collapse-tanker-trucks">
+            <div class="d-flex align-items-center justify-content-between flex-wrap">
+              <div class="d-flex align-items-center mb-1 mb-md-0">
+                <div class="mr-3 text-primary" style="font-size: 26px; width: 32px;"><i class="ion-ios-water"></i></div>
+                <div>
+                  <h3 class="mb-0 font-weight-bold" style="font-size: 18px; color: var(--rootze-dark);">Fuel & Fluid Tanker Trucks</h3>
+                  <p class="text-muted mb-0" style="font-size: 13px;">Rigid commercial chassis tanker trucks (15.1 m³ – 30.3 m³) for gasoline, diesel, crude oil, and chemical fluids.</p>
                 </div>
-                <p class="text-muted flex-grow-1" style="font-size: 13px; line-height: 1.6;" data-i18n="catalog.spv.p1_desc">
-                  High-density polyurethane (PU) sandwich insulated box with food-grade fiberglass reinforced plastic (FRP) skin, aluminum T-subfloor, and world-class Carrier/Thermo King independent refrigeration units mounted on robust Dongfeng commercial chassis.
-                </p>
-                <a href="#contact" class="btn btn-outline-primary btn-sm btn-block mt-auto" data-inquire-cat="Refrigerated Truck" data-i18n="products.btn_inquire">Inquire Price</a>
+              </div>
+              <div class="d-flex align-items-center ml-auto">
+                <span class="badge badge-primary px-3 py-2 mr-3 font-weight-bold" style="font-size: 13px;">9 Models</span>
+                <span class="text-muted font-weight-bold" style="font-size: 18px;"><i class="ion-ios-arrow-down"></i></span>
               </div>
             </div>
           </div>
-
-          <!-- Item 2: Fluid / Fuel Tanker -->
-          <div class="col-md-6 col-lg-3 mb-4 ftco-animate">
+          <div id="collapse-tanker-trucks" class="collapse show" aria-labelledby="heading-tanker-trucks" data-parent="#spvAccordion">
+            <div class="card-body p-3 p-md-4 bg-light">
+              <div class="row">
+          <!-- Card: 15.1m³ Auman Fuel Tanker Truck -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
             <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
-              <div class="img rounded-top d-flex align-items-end" style="background-image: url('../images/products/vehicles/fuel-tanker.jpg'); height: 220px; background-size: cover; background-position: center;"></div>
-              <div class="text p-4 d-flex flex-column flex-grow-1">
-                <span class="badge badge-primary mb-2 align-self-start" data-i18n="catalog.spv.badge_tanker">Fluid Transport</span>
-                <h3 class="font-weight-bold mb-2" style="font-size: 17px;" data-i18n="catalog.spv.p2_title">Heavy Fuel &amp; Water Tanker Truck</h3>
-                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
-                  <span class="spec-badge" data-i18n="catalog.spv.p2_b1">5,000L - 35,000L Volume</span>
-                  <span class="spec-badge" data-i18n="catalog.spv.p2_b2">5083 Aluminum / Q235</span>
-                  <span class="spec-badge" data-i18n="catalog.spv.p2_b3">Pneumatic Submarine Valve</span>
-                  <span class="spec-badge" data-i18n="catalog.spv.p2_b4">Surge Baffle Plates</span>
+              <a href="vehicles/fuel-tanker-15m3-auman.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/fuel-tanker-15m3-auman.jpg'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-primary" style="font-size: 11px;">Fuel Tanker Truck</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV5180GJYBJ15</span>
                 </div>
-                <p class="text-muted flex-grow-1" style="font-size: 13px; line-height: 1.6;" data-i18n="catalog.spv.p2_desc">
-                  Engineered for fuel, petroleum, potable water, and industrial chemical transport with trapezoidal internal anti-surge wave baffles, bottom emergency pneumatic submarine cut-off valves, and vapor recovery systems.
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/fuel-tanker-15m3-auman.html" class="text-dark">15.1m³ Auman Fuel Tanker Truck</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">GVW: 18000 kg</span>
+                      <span class="spec-badge">Payload: 10075 kg</span>
+                      <span class="spec-badge">15.1 m³</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  The tank has a total capacity of 15.1 m³ (effective volume 14.39 m³) and is a carbon steel rounded-rectangular tank, intended f...
                 </p>
-                <a href="#contact" class="btn btn-outline-primary btn-sm btn-block mt-auto" data-inquire-cat="Fuel & Water Tanker" data-i18n="products.btn_inquire">Inquire Price</a>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/fuel-tanker-15m3-auman.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="15.1m³ Auman Fuel Tanker Truck">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-
-          <!-- Item 3: Municipal Sweeper Truck -->
-          <div class="col-md-6 col-lg-3 mb-4 ftco-animate">
+          <!-- Card: 18.1m³ Flammable Liquid Tank Truck -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
             <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
-              <div class="img rounded-top d-flex align-items-end" style="background-image: url('../images/products/vehicles/sweeper-truck.jpg'); height: 220px; background-size: cover; background-position: center;"></div>
-              <div class="text p-4 d-flex flex-column flex-grow-1">
-                <span class="badge badge-success mb-2 align-self-start" data-i18n="catalog.spv.badge_sweeper">Municipal Sanitation</span>
-                <h3 class="font-weight-bold mb-2" style="font-size: 17px;" data-i18n="catalog.spv.p3_title">Road Sweeper &amp; High-Pressure Jetting</h3>
-                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
-                  <span class="spec-badge" data-i18n="catalog.spv.p3_b1">3.2m Sweeping Width</span>
-                  <span class="spec-badge" data-i18n="catalog.spv.p3_b2">&ge;98% Cleaning Rate</span>
-                  <span class="spec-badge" data-i18n="catalog.spv.p3_b3">Dual Auxiliary Engine</span>
-                  <span class="spec-badge" data-i18n="catalog.spv.p3_b4">15m&sup3; Stainless Tank</span>
+              <a href="vehicles/fuel-tanker-18m3-flammable.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/fuel-tanker-18m3-flammable.jpg'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-primary" style="font-size: 11px;">Flammable Liquid Tank Truck</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV5261GRYZZ18</span>
                 </div>
-                <p class="text-muted flex-grow-1" style="font-size: 13px; line-height: 1.6;" data-i18n="catalog.spv.p3_desc">
-                  Dual-engine configuration featuring independent Cummins auxiliary engine powering high-pressure water washing and centrifugal suction blowers. Includes 4 disc brooms, wide suction nozzle, and water curtain for dustless highway cleaning.
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/fuel-tanker-18m3-flammable.html" class="text-dark">18.1m³ Flammable Liquid Tank Truck</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">GVW: 26000 kg</span>
+                      <span class="spec-badge">Payload: 13260 / 13195 kg</span>
+                      <span class="spec-badge">18.1 m³</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  The tank has a total capacity of 18.1 m³ (effective volume 17.59 m³) and is a carbon steel rounded-rectangular tank, intended f...
                 </p>
-                <a href="#contact" class="btn btn-outline-primary btn-sm btn-block mt-auto" data-inquire-cat="Road Sweeper Truck" data-i18n="products.btn_inquire">Inquire Price</a>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/fuel-tanker-18m3-flammable.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="18.1m³ Flammable Liquid Tank Truck">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-
-          <!-- Item 4: Heavy Engineering Tipper -->
-          <div class="col-md-6 col-lg-3 mb-4 ftco-animate">
+          <!-- Card: 21.4m³ Flammable Liquid Tank Truck -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
             <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
-              <div class="img rounded-top d-flex align-items-end" style="background-image: url('../images/products/vehicles/heavy-dump-truck.jpg'); height: 220px; background-size: cover; background-position: center;"></div>
-              <div class="text p-4 d-flex flex-column flex-grow-1">
-                <span class="badge badge-secondary mb-2 align-self-start" data-i18n="catalog.spv.badge_dump">Heavy Engineering</span>
-                <h3 class="font-weight-bold mb-2" style="font-size: 17px;" data-i18n="catalog.spv.p4_title">Heavy-Duty Dump Tipper Truck (6&times;4 / 8&times;4)</h3>
-                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
-                  <span class="spec-badge" data-i18n="catalog.spv.p4_b1">25T - 50T Payload</span>
-                  <span class="spec-badge" data-i18n="catalog.spv.p4_b2">Cummins / Weichai 430HP</span>
-                  <span class="spec-badge" data-i18n="catalog.spv.p4_b3">NM450 Hardox U-Body</span>
-                  <span class="spec-badge" data-i18n="catalog.spv.p4_b4">HYVA Multi-Stage Lift</span>
+              <a href="vehicles/fuel-tanker-21m3-flammable.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/fuel-tanker-21m3-flammable.jpg'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-primary" style="font-size: 11px;">Flammable Liquid Tank Truck</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV5260GRYZZ21</span>
                 </div>
-                <p class="text-muted flex-grow-1" style="font-size: 13px; line-height: 1.6;" data-i18n="catalog.spv.p4_desc">
-                  Heavy mining and infrastructure engineering dump tipper built with wear-resistant high-strength alloy steel (NM450/Hardox) U-shaped cargo box, paired with world-class HYVA front multistage hydraulic lifting cylinders.
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/fuel-tanker-21m3-flammable.html" class="text-dark">21.4m³ Flammable Liquid Tank Truck</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">GVW: 26000 kg</span>
+                      <span class="spec-badge">Payload: 13370 / 13305 kg</span>
+                      <span class="spec-badge">21.4 m³</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  The tank has a total capacity of 21.4 m³ (effective volume 20.78 m³) and is a carbon steel rounded-rectangular tank, intended f...
                 </p>
-                <a href="#contact" class="btn btn-outline-primary btn-sm btn-block mt-auto" data-inquire-cat="Heavy Dump Truck" data-i18n="products.btn_inquire">Inquire Price</a>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/fuel-tanker-21m3-flammable.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="21.4m³ Flammable Liquid Tank Truck">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card: 21m³ Dongfeng Flammable Liquid Tank Truck -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/fuel-tanker-21m3-dongfeng.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/fuel-tanker-21m3-dongfeng.png'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-primary" style="font-size: 11px;">Flammable Liquid Tank Truck</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV5261GRYEQ6</span>
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/fuel-tanker-21m3-dongfeng.html" class="text-dark">21m³ Dongfeng Flammable Liquid Tank Truck</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">GVW: 26000 kg</span>
+                      <span class="spec-badge">Payload: 13870 / 13805 kg</span>
+                      <span class="spec-badge">21 m³</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  The tank has a total capacity of 21 m³ (effective volume 20.4 m³) and is a carbon steel rounded-rectangular tank, intended for ...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/fuel-tanker-21m3-dongfeng.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="21m³ Dongfeng Flammable Liquid Tank Truck">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card: 25.8m³ Auman Aluminum Alloy Fuel Tanker Truck -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/fuel-tanker-258m3-auman-alloy.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/fuel-tanker-258m3-auman-alloy.png'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-primary" style="font-size: 11px;">Fuel Tanker Truck</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV5321GYYBJ6A</span>
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/fuel-tanker-258m3-auman-alloy.html" class="text-dark">25.8m³ Auman Aluminum Alloy Fuel Tanker Truck</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">GVW: 32000 kg</span>
+                      <span class="spec-badge">Payload: 20620 kg</span>
+                      <span class="spec-badge">25.8 m³</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  The tank has a total capacity of 25.8 m³ (effective volume 25.1 m³) and is a aluminum alloy rounded-rectangular tank, intended ...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/fuel-tanker-258m3-auman-alloy.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="25.8m³ Auman Aluminum Alloy Fuel Tanker Truck">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card: 26.5m³ Auman Fuel Tanker Truck -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/fuel-tanker-265m3-auman.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/fuel-tanker-265m3-auman.jpg'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-primary" style="font-size: 11px;">Fuel Tanker Truck</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV5320GYYBJ6</span>
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/fuel-tanker-265m3-auman.html" class="text-dark">26.5m³ Auman Fuel Tanker Truck</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">GVW: 32000 kg</span>
+                      <span class="spec-badge">Payload: 18070 kg</span>
+                      <span class="spec-badge">26.5 m³</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  The tank has a total capacity of 26.5 m³ (effective volume 25.8 m³) and is a carbon steel rounded-rectangular tank, intended fo...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/fuel-tanker-265m3-auman.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="26.5m³ Auman Fuel Tanker Truck">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card: 26m³ Dongfeng Aluminum Alloy Fuel Tanker Truck -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/fuel-tanker-26m3-dongfeng-alloy.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/fuel-tanker-26m3-dongfeng-alloy.jpg'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-primary" style="font-size: 11px;">Fuel Tanker Truck</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV5320GYYDFH6A</span>
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/fuel-tanker-26m3-dongfeng-alloy.html" class="text-dark">26m³ Dongfeng Aluminum Alloy Fuel Tanker Truck</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">GVW: 32000 kg</span>
+                      <span class="spec-badge">Payload: 20370 / 20305 kg</span>
+                      <span class="spec-badge">26 m³</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  The tank has a total capacity of 26 m³ (effective volume 24.7 m³) and is a aluminum alloy rounded-rectangular tank, intended fo...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/fuel-tanker-26m3-dongfeng-alloy.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="26m³ Dongfeng Aluminum Alloy Fuel Tanker Truck">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card: 26m³ Aluminum Alloy Fuel Tanker Truck -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/fuel-tanker-26m3-alloy.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/fuel-tanker-26m3-alloy.jpg'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-primary" style="font-size: 11px;">Fuel Tanker Truck</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV5320GYYZZ6A</span>
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/fuel-tanker-26m3-alloy.html" class="text-dark">26m³ Aluminum Alloy Fuel Tanker Truck</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">GVW: 32000 kg</span>
+                      <span class="spec-badge">Payload: 20370 / 20305 kg</span>
+                      <span class="spec-badge">26 m³</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  The tank has a total capacity of 26 m³ (effective volume 24.7 m³) and is a aluminum alloy rounded-rectangular tank, intended fo...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/fuel-tanker-26m3-alloy.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="26m³ Aluminum Alloy Fuel Tanker Truck">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card: 30.3m³ Dongfeng Aluminum Alloy Fuel Tanker Truck -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/fuel-tanker-303m3-dongfeng-alloy.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/fuel-tanker-303m3-dongfeng-alloy.jpg'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-primary" style="font-size: 11px;">Fuel Tanker Truck</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV5321GYYDFH6A</span>
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/fuel-tanker-303m3-dongfeng-alloy.html" class="text-dark">30.3m³ Dongfeng Aluminum Alloy Fuel Tanker Truck</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">GVW: 32000 kg</span>
+                      <span class="spec-badge">Payload: 20270 / 20205 kg</span>
+                      <span class="spec-badge">30.3 m³</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  The tank has a total capacity of 30.3 m³ (effective volume 28.8 m³) and is a aluminum alloy rounded-rectangular tank, intended ...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/fuel-tanker-303m3-dongfeng-alloy.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="30.3m³ Dongfeng Aluminum Alloy Fuel Tanker Truck">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Technical Specification Table -->
-    <section class="py-5 bg-white">
-      <div class="container">
-        <div class="row justify-content-center mb-4">
-          <div class="col-md-8 text-center heading-section">
-            <span class="subheading" style="color: var(--rootze-primary); font-weight: 700;" data-i18n="products.quick_specs">Quick Specs</span>
-            <h2 class="mb-3" data-i18n="products.tech_specs_title">Technical Specifications & Comparison</h2>
+        <!-- Category Item: Fuel & Fluid Tanker Semi-trailers -->
+        <div class="card mb-3 border-0 shadow-sm rounded overflow-hidden">
+          <div class="card-header bg-white py-3 px-4 border-bottom-0 collapsed" id="heading-tanker-semis" style="cursor: pointer;" data-toggle="collapse" data-target="#collapse-tanker-semis" aria-expanded="false" aria-controls="collapse-tanker-semis">
+            <div class="d-flex align-items-center justify-content-between flex-wrap">
+              <div class="d-flex align-items-center mb-1 mb-md-0">
+                <div class="mr-3 text-primary" style="font-size: 26px; width: 32px;"><i class="ion-ios-speedometer"></i></div>
+                <div>
+                  <h3 class="mb-0 font-weight-bold" style="font-size: 18px; color: var(--rootze-dark);">Fuel & Fluid Tanker Semi-trailers</h3>
+                  <p class="text-muted mb-0" style="font-size: 13px;">High-capacity aluminum alloy and carbon steel semi-trailers (37.6 m³ – 49.9 m³) with gooseneck and straight frame designs.</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center ml-auto">
+                <span class="badge badge-primary px-3 py-2 mr-3 font-weight-bold" style="font-size: 13px;">11 Models</span>
+                <span class="text-muted font-weight-bold" style="font-size: 18px;"><i class="ion-ios-arrow-down"></i></span>
+              </div>
+            </div>
+          </div>
+          <div id="collapse-tanker-semis" class="collapse " aria-labelledby="heading-tanker-semis" data-parent="#spvAccordion">
+            <div class="card-body p-3 p-md-4 bg-light">
+              <div class="row">
+          <!-- Card: 37.6m³ Auman Aluminum Alloy Fuel Tanker Semi-trailer -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/semi-tanker-376m3-auman-alloy.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/semi-tanker-376m3-auman-alloy.png'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-primary" style="font-size: 11px;">Fuel Tanker Semi-trailer</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV9351GYYA</span>
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/semi-tanker-376m3-auman-alloy.html" class="text-dark">37.6m³ Auman Aluminum Alloy Fuel Tanker Semi-trailer</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">GVW: 35000 kg</span>
+                      <span class="spec-badge">Payload: 30000 / 29730 kg</span>
+                      <span class="spec-badge">37.6 m³</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  The tank has a total capacity of 37.6 m³ (effective volume 35.8 m³) and is a aluminum alloy rounded-rectangular tank with a str...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/semi-tanker-376m3-auman-alloy.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="37.6m³ Auman Aluminum Alloy Fuel Tanker Semi-trailer">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card: 38.5m³ Auman Fuel Tanker Semi-trailer -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/semi-tanker-385m3-auman.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/semi-tanker-385m3-auman.jpg'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-primary" style="font-size: 11px;">Fuel Tanker Semi-trailer</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV9403GYY</span>
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/semi-tanker-385m3-auman.html" class="text-dark">38.5m³ Auman Fuel Tanker Semi-trailer</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">GVW: 40000 kg</span>
+                      <span class="spec-badge">Payload: 30900 kg</span>
+                      <span class="spec-badge">38.5 m³</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  The tank has a total capacity of 38.5 m³ (effective volume 37.2 m³) and is a carbon steel rounded-rectangular tank with a goose...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/semi-tanker-385m3-auman.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="38.5m³ Auman Fuel Tanker Semi-trailer">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card: 40.4m³ Auman Aluminum Alloy Fuel Tanker Semi-trailer -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/semi-tanker-404m3-auman-alloy.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/semi-tanker-404m3-auman-alloy.jpg'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-primary" style="font-size: 11px;">Fuel Tanker Semi-trailer</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV9400GYYB</span>
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/semi-tanker-404m3-auman-alloy.html" class="text-dark">40.4m³ Auman Aluminum Alloy Fuel Tanker Semi-trailer</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">GVW: 40000 kg</span>
+                      <span class="spec-badge">Payload: 33500 / 33800 kg</span>
+                      <span class="spec-badge">40.4 m³</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  The tank has a total capacity of 40.4 m³ (effective volume 40.3 m³) and is a aluminum alloy rounded-rectangular tank with a str...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/semi-tanker-404m3-auman-alloy.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="40.4m³ Auman Aluminum Alloy Fuel Tanker Semi-trailer">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card: 42m³ Aluminum Alloy Fuel Tanker Semi-trailer -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/semi-tanker-42m3-alloy.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/semi-tanker-42m3-alloy.png'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-primary" style="font-size: 11px;">Fuel Tanker Semi-trailer</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV9405GYYA</span>
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/semi-tanker-42m3-alloy.html" class="text-dark">42m³ Aluminum Alloy Fuel Tanker Semi-trailer</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">GVW: 40000 kg</span>
+                      <span class="spec-badge">Payload: 33500 / 33200 kg</span>
+                      <span class="spec-badge">42 m³</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  The tank has a total capacity of 42 m³ (effective volume 40 m³) and is a aluminum alloy rounded-rectangular tank with a straigh...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/semi-tanker-42m3-alloy.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="42m³ Aluminum Alloy Fuel Tanker Semi-trailer">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card: 43m³ Aluminum Alloy Flammable Liquid Tank Semi-trailer (Model A) -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/semi-tanker-43m3-flammable-a.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/semi-tanker-43m3-flammable-a.jpg'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-primary" style="font-size: 11px;">Flammable Liquid Semi-trailer</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV9409GRYA</span>
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/semi-tanker-43m3-flammable-a.html" class="text-dark">43m³ Aluminum Alloy Flammable Liquid Tank Semi-trailer (Model A)</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">GVW: 40000 kg</span>
+                      <span class="spec-badge">Payload: 33600 / 33200 kg</span>
+                      <span class="spec-badge">43 m³</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  The tank has a total capacity of 43 m³ (effective volume 40.9 m³) and is a aluminum alloy round tank with a gooseneck frame, in...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/semi-tanker-43m3-flammable-a.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="43m³ Aluminum Alloy Flammable Liquid Tank Semi-trailer (Model A)">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card: 43m³ Aluminum Alloy Flammable Liquid Tank Semi-trailer (Model B) -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/semi-tanker-43m3-flammable-b.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/semi-tanker-43m3-flammable-b.png'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-primary" style="font-size: 11px;">Flammable Liquid Semi-trailer</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV9407GRYA</span>
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/semi-tanker-43m3-flammable-b.html" class="text-dark">43m³ Aluminum Alloy Flammable Liquid Tank Semi-trailer (Model B)</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">GVW: 40000 kg</span>
+                      <span class="spec-badge">Payload: 33700 / 33200 kg</span>
+                      <span class="spec-badge">43 m³</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  The tank has a total capacity of 43 m³ (effective volume 42 m³) and is a aluminum alloy round tank with a gooseneck frame, inte...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/semi-tanker-43m3-flammable-b.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="43m³ Aluminum Alloy Flammable Liquid Tank Semi-trailer (Model B)">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card: 45m³ Aluminum Alloy Fuel Tanker Semi-trailer -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/semi-tanker-45m3-alloy.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/semi-tanker-45m3-alloy.jpg'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-primary" style="font-size: 11px;">Fuel Tanker Semi-trailer</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV9404GYYA</span>
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/semi-tanker-45m3-alloy.html" class="text-dark">45m³ Aluminum Alloy Fuel Tanker Semi-trailer</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">GVW: 40000 kg</span>
+                      <span class="spec-badge">Payload: 33300 / 32800 kg</span>
+                      <span class="spec-badge">45 m³</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  The tank has a total capacity of 45 m³ (effective volume 44.9 m³) and is a aluminum alloy rounded-rectangular tank with a goose...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/semi-tanker-45m3-alloy.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="45m³ Aluminum Alloy Fuel Tanker Semi-trailer">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card: 46.1m³ Aluminum Alloy Fuel Tanker Semi-trailer -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/semi-tanker-461m3-alloy.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/semi-tanker-461m3-alloy.jpg'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-primary" style="font-size: 11px;">Fuel Tanker Semi-trailer</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV9407GYYA</span>
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/semi-tanker-461m3-alloy.html" class="text-dark">46.1m³ Aluminum Alloy Fuel Tanker Semi-trailer</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">GVW: 40000 kg</span>
+                      <span class="spec-badge">Payload: 33500 / 33000 kg</span>
+                      <span class="spec-badge">46.1 m³</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  The tank has a total capacity of 46.1 m³ (effective volume 44 m³) and is a aluminum alloy rounded-rectangular tank with a strai...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/semi-tanker-461m3-alloy.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="46.1m³ Aluminum Alloy Fuel Tanker Semi-trailer">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card: 47m³ Auman Aluminum Alloy Fuel Tanker Semi-trailer -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/semi-tanker-47m3-auman-alloy.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/semi-tanker-47m3-auman-alloy.jpg'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-primary" style="font-size: 11px;">Fuel Tanker Semi-trailer</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV9406GYYB</span>
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/semi-tanker-47m3-auman-alloy.html" class="text-dark">47m³ Auman Aluminum Alloy Fuel Tanker Semi-trailer</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">GVW: 40000 kg</span>
+                      <span class="spec-badge">Payload: 33500 / 33850 / 34000 kg</span>
+                      <span class="spec-badge">47 m³</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  The tank has a total capacity of 47 m³ (effective volume 45.5 m³) and is a aluminum alloy rounded-rectangular tank with a goose...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/semi-tanker-47m3-auman-alloy.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="47m³ Auman Aluminum Alloy Fuel Tanker Semi-trailer">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card: 48m³ Aluminum Alloy Fuel Tanker Semi-trailer -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/semi-tanker-48m3-alloy.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/semi-tanker-48m3-alloy.png'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-primary" style="font-size: 11px;">Fuel Tanker Semi-trailer</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV9400GYYA</span>
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/semi-tanker-48m3-alloy.html" class="text-dark">48m³ Aluminum Alloy Fuel Tanker Semi-trailer</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">GVW: 40000 kg</span>
+                      <span class="spec-badge">Payload: 33600 / 34000 kg</span>
+                      <span class="spec-badge">48 m³</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  The tank has a total capacity of 48 m³ (effective volume 47.1 m³) and is a aluminum alloy rounded-rectangular tank with a goose...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/semi-tanker-48m3-alloy.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="48m³ Aluminum Alloy Fuel Tanker Semi-trailer">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card: 49.9m³ Auman Aluminum Alloy Fuel Tanker Semi-trailer -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/semi-tanker-499m3-auman-alloy.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/semi-tanker-499m3-auman-alloy.jpg'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-primary" style="font-size: 11px;">Fuel Tanker Semi-trailer</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV9409GYYA</span>
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/semi-tanker-499m3-auman-alloy.html" class="text-dark">49.9m³ Auman Aluminum Alloy Fuel Tanker Semi-trailer</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">GVW: 40000 kg</span>
+                      <span class="spec-badge">Payload: 33500 / 33300 kg</span>
+                      <span class="spec-badge">49.9 m³</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  The tank has a total capacity of 49.9 m³ (effective volume 47.5 m³) and is a aluminum alloy rounded-rectangular tank with a goo...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/semi-tanker-499m3-auman-alloy.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="49.9m³ Auman Aluminum Alloy Fuel Tanker Semi-trailer">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+              </div>
+            </div>
           </div>
         </div>
-        <p class="table-scroll-hint"><i class="ion-ios-swap mr-1"></i>Scroll horizontally to view full table &rarr;</p>
-        <div class="table-responsive shadow-sm border rounded">
-          <table class="table table-bordered table-hover catalog-specs-table mb-0" style="font-size: 14px;">
-            <thead class="thead-dark" style="background: var(--rootze-dark);">
-              <tr>
-                <th data-i18n="catalog.th_model">Vehicle Class</th>
-                <th data-i18n="catalog.th_chassis">Chassis Platform</th>
-                <th data-i18n="catalog.th_drive">Drive Configuration</th>
-                <th data-i18n="catalog.th_capacity">Payload / Capacity</th>
-                <th data-i18n="catalog.th_engine">Engine & Emission</th>
-                <th data-i18n="catalog.th_superstructure">Superstructure Details</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td data-i18n="catalog.spv.tbl_r1_model"><strong>Refrigerated Truck (4&times;2)</strong></td>
-                <td data-label="Chassis Platform">Dongfeng Captain / KR</td>
-                <td data-label="Drive Configuration" data-i18n="catalog.spv.tbl_r1_drive">4&times;2 (LHD / RHD Available)</td>
-                <td data-label="Payload / Capacity">3T to 8T Payload (18–28 m&sup3;)</td>
-                <td data-label="Engine & Emission">Cummins ISF 3.8 / B4.5 (Euro 3/4/5/6)</td>
-                <td data-label="Superstructure" data-i18n="catalog.spv.tbl_r1_superstructure">FRP polyurethane sandwich box, Carrier -18&deg;C chiller unit, T-subfloor</td>
-              </tr>
-              <tr>
-                <td data-i18n="catalog.spv.tbl_r2_model"><strong>Heavy Cold-Chain (6&times;4)</strong></td>
-                <td data-label="Chassis Platform">Dongfeng Tianjin / KC</td>
-                <td data-label="Drive Configuration" data-i18n="catalog.spv.tbl_r2_drive">6&times;4 Heavy Duty</td>
-                <td data-label="Payload / Capacity">15T to 20T Payload (45–55 m&sup3;)</td>
-                <td data-label="Engine & Emission">Cummins DDi75 / ISL (315–380 HP)</td>
-                <td data-label="Superstructure" data-i18n="catalog.spv.tbl_r2_superstructure">Thermo King independent diesel refrigeration unit, dual-temp zone partition</td>
-              </tr>
-              <tr>
-                <td data-i18n="catalog.spv.tbl_r3_model"><strong>Fuel &amp; Fluid Tanker</strong></td>
-                <td data-label="Chassis Platform">Dongfeng / Sinotruk HOWO</td>
-                <td data-label="Drive Configuration">4&times;2 / 6&times;4 / 8&times;4 (LHD / RHD)</td>
-                <td data-label="Payload / Capacity">10,000L to 35,000L Tank</td>
-                <td data-label="Engine & Emission">Weichai / Yuchai 240–380 HP</td>
-                <td data-label="Superstructure" data-i18n="catalog.spv.tbl_r3_superstructure">5083 Aluminum or Q235 steel, pneumatic submarine valves, anti-wave baffles</td>
-              </tr>
-              <tr>
-                <td data-i18n="catalog.spv.tbl_r4_model"><strong>Municipal High-Pressure Sweeper</strong></td>
-                <td data-label="Chassis Platform">Dongfeng Dollicar / Tianjin</td>
-                <td data-label="Drive Configuration">4&times;2 (LHD / RHD)</td>
-                <td data-label="Payload / Capacity">6m&sup3; Dust + 9m&sup3; Water Tank (15m&sup3;)</td>
-                <td data-label="Engine & Emission">Auxiliary Cummins diesel engine 140 HP</td>
-                <td data-label="Superstructure" data-i18n="catalog.spv.tbl_r4_superstructure">Central 4 disc brooms, 3.2m sweep path, 98% efficiency, high-pressure spray curtain</td>
-              </tr>
-              <tr>
-                <td data-i18n="catalog.spv.tbl_r5_model"><strong>Heavy Mining Tipper Truck</strong></td>
-                <td data-label="Chassis Platform">Dongfeng KC / Shacman X3000</td>
-                <td data-label="Drive Configuration">6&times;4 / 8&times;4 Heavy Duty</td>
-                <td data-label="Payload / Capacity">25T to 50T Payload (20–35 m&sup3;)</td>
-                <td data-label="Engine & Emission">Weichai WP12 / Cummins 380–460 HP</td>
-                <td data-label="Superstructure">NM450 Hardox U-shaped wear-resistant bucket, HYVA multi-stage front cylinder</td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- Category Item: Cold-Chain Refrigerated Trucks & Semi-trailers -->
+        <div class="card mb-3 border-0 shadow-sm rounded overflow-hidden">
+          <div class="card-header bg-white py-3 px-4 border-bottom-0 collapsed" id="heading-reefer" style="cursor: pointer;" data-toggle="collapse" data-target="#collapse-reefer" aria-expanded="false" aria-controls="collapse-reefer">
+            <div class="d-flex align-items-center justify-content-between flex-wrap">
+              <div class="d-flex align-items-center mb-1 mb-md-0">
+                <div class="mr-3 text-primary" style="font-size: 26px; width: 32px;"><i class="ion-ios-snow"></i></div>
+                <div>
+                  <h3 class="mb-0 font-weight-bold" style="font-size: 18px; color: var(--rootze-dark);">Cold-Chain Refrigerated Trucks & Semi-trailers</h3>
+                  <p class="text-muted mb-0" style="font-size: 13px;">Advanced polyurethane insulated reefers, 45ft semi-trailers (air suspension/leaf spring) and urban delivery box trucks.</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center ml-auto">
+                <span class="badge badge-info px-3 py-2 mr-3 font-weight-bold" style="font-size: 13px;">5 Models</span>
+                <span class="text-muted font-weight-bold" style="font-size: 18px;"><i class="ion-ios-arrow-down"></i></span>
+              </div>
+            </div>
+          </div>
+          <div id="collapse-reefer" class="collapse " aria-labelledby="heading-reefer" data-parent="#spvAccordion">
+            <div class="card-body p-3 p-md-4 bg-light">
+              <div class="row">
+          <!-- Card: Auman Light-Duty Refrigerated Truck -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/reefer-truck-auman.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/reefer-truck-auman.jpg'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-info" style="font-size: 11px;">Refrigerated Truck</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV5040XLCJXW6</span>
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/reefer-truck-auman.html" class="text-dark">Auman Light-Duty Refrigerated Truck</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">Box: 3750–4080 × 1800–2100 × 1800–2100</span>
+                      <span class="spec-badge">GVW: 4495 kg</span>
+                      <span class="spec-badge">Payload: 1100 / 1165 kg</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  A light-duty commercial refrigerated truck with a gross vehicle weight of 4,495 kg and several box-size options, suited to cold...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/reefer-truck-auman.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="Auman Light-Duty Refrigerated Truck">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card: 8m Isuzu Refrigerated Truck -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/reefer-truck-8m-isuzu.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/reefer-truck-8m-isuzu.jpg'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-info" style="font-size: 11px;">Refrigerated Truck</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV5180XLCQL6</span>
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/reefer-truck-8m-isuzu.html" class="text-dark">8m Isuzu Refrigerated Truck</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">GVW: 18000 kg</span>
+                      <span class="spec-badge">Payload: 9305 kg</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  An 8-meter refrigerated truck built by Rootze Partner Coalition on an Isuzu chassis. The box uses polyurethane foaming with XPS...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/reefer-truck-8m-isuzu.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="8m Isuzu Refrigerated Truck">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card: 45ft Integrated Refrigerated Semi-trailer (Leaf Spring) -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/reefer-semi-45ft-leaf-spring.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/reefer-semi-45ft-leaf-spring.jpg'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-info" style="font-size: 11px;">Refrigerated Semi-trailer</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV9401XLC</span>
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/reefer-semi-45ft-leaf-spring.html" class="text-dark">45ft Integrated Refrigerated Semi-trailer (Leaf Spring)</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">Box: 13425 × 2450 × 2470</span>
+                      <span class="spec-badge">GVW: 40000 kg</span>
+                      <span class="spec-badge">Payload: 31520 / 31320 kg</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  A 45ft integrated refrigerated semi-trailer with leaf-spring suspension and dual tires. The box features sandwich closed-cell f...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/reefer-semi-45ft-leaf-spring.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="45ft Integrated Refrigerated Semi-trailer (Leaf Spring)">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card: 45ft Integrated Refrigerated Semi-trailer (Air Suspension) -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/reefer-semi-45ft-air-suspension.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/reefer-semi-45ft-air-suspension.png'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-info" style="font-size: 11px;">Refrigerated Semi-trailer</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV9400XLC</span>
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/reefer-semi-45ft-air-suspension.html" class="text-dark">45ft Integrated Refrigerated Semi-trailer (Air Suspension)</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">Box: 13425 × 2450 × 2470</span>
+                      <span class="spec-badge">GVW: 40000 kg</span>
+                      <span class="spec-badge">Payload: 31900 / 31600 kg</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  A 45ft integrated refrigerated semi-trailer with air suspension. The box features sandwich closed-cell foaming with integrally ...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/reefer-semi-45ft-air-suspension.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="45ft Integrated Refrigerated Semi-trailer (Air Suspension)">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card: 45ft Split-type Refrigerated Semi-trailer -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/reefer-semi-45ft-split.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/reefer-semi-45ft-split.jpg'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-info" style="font-size: 11px;">Refrigerated Semi-trailer</span>
+                  <span class="badge badge-dark ml-auto" style="font-size: 11px;">HFV9402XLC</span>
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/reefer-semi-45ft-split.html" class="text-dark">45ft Split-type Refrigerated Semi-trailer</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">Box: 13365 × 2450 × 2450</span>
+                      <span class="spec-badge">GVW: 40000 kg</span>
+                      <span class="spec-badge">Payload: 31520 kg</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  A 45ft split-type refrigerated semi-trailer with leaf-spring suspension and dual tires. The box uses sandwich closed-cell foami...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/reefer-semi-45ft-split.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="45ft Split-type Refrigerated Semi-trailer">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Category Item: Engineering Tipper Bodies & Special Vehicles -->
+        <div class="card mb-3 border-0 shadow-sm rounded overflow-hidden">
+          <div class="card-header bg-white py-3 px-4 border-bottom-0 collapsed" id="heading-engineering" style="cursor: pointer;" data-toggle="collapse" data-target="#collapse-engineering" aria-expanded="false" aria-controls="collapse-engineering">
+            <div class="d-flex align-items-center justify-content-between flex-wrap">
+              <div class="d-flex align-items-center mb-1 mb-md-0">
+                <div class="mr-3 text-primary" style="font-size: 26px; width: 32px;"><i class="ion-ios-construct"></i></div>
+                <div>
+                  <h3 class="mb-0 font-weight-bold" style="font-size: 18px; color: var(--rootze-dark);">Engineering Tipper Bodies & Special Vehicles</h3>
+                  <p class="text-muted mb-0" style="font-size: 13px;">Heavy-duty U-shaped tipper superstructures, wear-resistant alloy bodies, smart IoT covers, and municipal utility vehicles.</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center ml-auto">
+                <span class="badge badge-secondary px-3 py-2 mr-3 font-weight-bold" style="font-size: 13px;">3 Models</span>
+                <span class="text-muted font-weight-bold" style="font-size: 18px;"><i class="ion-ios-arrow-down"></i></span>
+              </div>
+            </div>
+          </div>
+          <div id="collapse-engineering" class="collapse " aria-labelledby="heading-engineering" data-parent="#spvAccordion">
+            <div class="card-body p-3 p-md-4 bg-light">
+              <div class="row">
+          <!-- Card: Engineering Vehicle 1 (U-Box Body, 510L Steel) -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/engineering-vehicle-1.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/engineering-vehicle-1.png'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-secondary" style="font-size: 11px;">Engineering Vehicle</span>
+                  
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/engineering-vehicle-1.html" class="text-dark">Engineering Vehicle 1 (U-Box Body, 510L Steel)</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">Body: 5400–6500 × 2300 / 2350 × 1500</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  An engineering-vehicle body engineered for heavy-duty commercial applications with a U-shaped box that lets spoil slide out eas...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/engineering-vehicle-1.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="Engineering Vehicle 1 (U-Box Body, 510L Steel)">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card: Engineering Vehicle 2 (Standard Heavy-Duty Body) -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/engineering-vehicle-2.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/engineering-vehicle-2.jpg'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-secondary" style="font-size: 11px;">Engineering Vehicle</span>
+                  
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/engineering-vehicle-2.html" class="text-dark">Engineering Vehicle 2 (Standard Heavy-Duty Body)</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  An engineering vehicle built for commercial infrastructure operations, part of the company&#x27;s special-purpose vehicle range (eng...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/engineering-vehicle-2.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="Engineering Vehicle 2 (Standard Heavy-Duty Body)">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card: Engineering Vehicle 3 (U-Box Body, T700 / IoT) -->
+          <div class="col-md-6 col-lg-4 mb-4 ftco-animate">
+            <div class="car-wrap rounded h-100 d-flex flex-column bg-white shadow-sm border">
+              <a href="vehicles/engineering-vehicle-3.html" class="d-block overflow-hidden rounded-top" style="height: 200px;">
+                <div class="img rounded-top" style="background-image: url('../images/products/vehicles/engineering-vehicle-3.jpg'); height: 200px; background-size: cover; background-position: center; transition: transform 0.3s ease;"></div>
+              </a>
+              <div class="text p-3 d-flex flex-column flex-grow-1">
+                <div class="d-flex align-items-center mb-2">
+                  <span class="badge badge-secondary" style="font-size: 11px;">Engineering Vehicle</span>
+                  
+                </div>
+                <h4 class="font-weight-bold mb-2" style="font-size: 15.5px; line-height: 1.4;">
+                  <a href="vehicles/engineering-vehicle-3.html" class="text-dark">Engineering Vehicle 3 (U-Box Body, T700 / IoT)</a>
+                </h4>
+                <div class="spec-badge-wrap d-flex flex-wrap mb-2" style="gap: 4px;">
+                  <span class="spec-badge">Body: 5600 × 2300 × 900</span>
+                      
+                </div>
+                <p class="text-muted mb-3 flex-grow-1" style="font-size: 12.5px; line-height: 1.5;">
+                  An engineering-vehicle body engineered for heavy-duty commercial applications with a well-sealed U-shaped box, a lightweight to...
+                </p>
+                <div class="d-flex mt-auto pt-2 border-top" style="gap: 6px;">
+                  <a href="vehicles/engineering-vehicle-3.html" class="btn btn-outline-primary btn-sm flex-grow-1 font-weight-bold py-1">
+                    <i class="ion-ios-eye mr-1"></i> Full Specs
+                  </a>
+                  <a href="#contact" class="btn btn-primary btn-sm font-weight-bold py-1 px-3" data-inquire-cat="Engineering Vehicle 3 (U-Box Body, T700 / IoT)">
+                    <i class="ion-ios-mail mr-1"></i> RFQ
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+              </div>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
     </section>
