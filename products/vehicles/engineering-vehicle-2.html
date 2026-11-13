@@ -102,10 +102,15 @@
     <section class="ftco-section bg-white py-5">
       <div class="container">
         <div class="row align-items-start">
-          <!-- Left: Product Image -->
+          <!-- Left: Product Image with Magnific Popup -->
           <div class="col-lg-5 mb-4 mb-lg-0">
-            <div class="border rounded p-3 bg-white shadow-sm text-center">
-              <img src="../../images/products/vehicles/engineering-vehicle-2.jpg" alt="Heavy-Duty Engineering Tipper Truck (Custom Chassis &amp; Body)" class="img-fluid rounded" style="width: 100%; max-height: 420px; object-fit: contain; background: #fdfdfd;">
+            <div class="border rounded p-3 bg-white shadow-sm text-center position-relative">
+              <a href="../../images/products/vehicles/engineering-vehicle-2.jpg" class="image-popup d-block" title="Heavy-Duty Engineering Tipper Truck (Custom Chassis &amp; Body)">
+                <img src="../../images/products/vehicles/engineering-vehicle-2.jpg" alt="Heavy-Duty Engineering Tipper Truck (Custom Chassis &amp; Body)" class="img-fluid rounded" style="width: 100%; max-height: 420px; object-fit: contain; background: #fdfdfd; transition: transform 0.3s ease;">
+                <div class="position-absolute" style="bottom: 18px; right: 24px; background: rgba(11, 19, 37, 0.75); color: #fff; padding: 4px 10px; border-radius: 20px; font-size: 11px; pointer-events: none;">
+                  <i class="ion-ios-search mr-1"></i><span data-i18n="catalog.spv.click_to_zoom">Click to zoom</span>
+                </div>
+              </a>
             </div>
           </div>
           
@@ -127,7 +132,7 @@
             
             <!-- CTA Buttons -->
             <div class="d-flex flex-wrap gap-2 pt-3 border-top">
-              <a href="../special-vehicles.html#contact" class="btn btn-primary py-2 px-4 font-weight-bold mr-2"><i class="ion-ios-paper-plane mr-1"></i> <span data-i18n="catalog.spv.btn_quote">Request a Factory Quote</span></a>
+              <a href="../special-vehicles.html?inquire=Heavy-Duty%20Engineering%20Tipper%20Truck%20%28Custom%20Chassis%20%26%20Body%29&model=#contact" class="btn btn-primary py-2 px-4 font-weight-bold mr-2"><i class="ion-ios-paper-plane mr-1"></i> <span data-i18n="catalog.spv.btn_quote">Request a Factory Quote</span></a>
               <a href="../special-vehicles.html" class="btn btn-outline-secondary py-2 px-3 font-weight-bold"><i class="ion-ios-arrow-back mr-1"></i> <span data-i18n="catalog.spv.btn_back">Back to Vehicle Catalog</span></a>
             </div>
           </div>
@@ -147,6 +152,34 @@
 
 
 
+
+        <!-- Adjacent Models Navigation (Within Same Category) -->
+        <div class="row mt-5 pt-4 border-top">
+          <div class="col-6 text-left">
+            <a href="engineering-vehicle-1.html" class="d-inline-flex align-items-center text-dark text-decoration-none py-2 px-3 border rounded bg-light hover-shadow" style="transition: all 0.2s ease;">
+              <span class="mr-2 text-primary" style="font-size: 22px;"><i class="ion-ios-arrow-dropleft-circle"></i></span>
+              <div class="d-none d-sm-block">
+                <small class="text-muted d-block font-weight-bold text-uppercase" style="font-size: 11px;" data-i18n="catalog.spv.nav_prev">Previous Model</small>
+                <span class="font-weight-bold" style="font-size: 13.5px;" data-i18n="spv.engineering-vehicle-1.title">Heavy-Duty U-Box Tipper Superstructure (510L Steel / Electric Cover)</span>
+              </div>
+              <div class="d-block d-sm-none">
+                <span class="font-weight-bold" style="font-size: 12px;" data-i18n="catalog.spv.nav_prev">Previous</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 text-right">
+            <a href="engineering-vehicle-3.html" class="d-inline-flex align-items-center justify-content-end text-dark text-decoration-none py-2 px-3 border rounded bg-light hover-shadow ml-auto" style="transition: all 0.2s ease;">
+              <div class="d-none d-sm-block text-right">
+                <small class="text-muted d-block font-weight-bold text-uppercase" style="font-size: 11px;" data-i18n="catalog.spv.nav_next">Next Model</small>
+                <span class="font-weight-bold" style="font-size: 13.5px;" data-i18n="spv.engineering-vehicle-3.title">Smart Eco U-Box Tipper Superstructure (T700 High-Strength Steel / IoT Cover)</span>
+              </div>
+              <div class="d-block d-sm-none text-right">
+                <span class="font-weight-bold" style="font-size: 12px;" data-i18n="catalog.spv.nav_next">Next</span>
+              </div>
+              <span class="ml-2 text-primary" style="font-size: 22px;"><i class="ion-ios-arrow-dropright-circle"></i></span>
+            </a>
+          </div>
+        </div>
 
         <!-- Disclaimer -->
         <div class="row mt-4">

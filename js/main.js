@@ -285,6 +285,50 @@
       }
     });
 
+    // Auto-fill inquiry form from URL parameters (e.g. from vehicle detail page "Request a Quote" CTA)
+    try {
+      if (window.location && window.location.search) {
+        var urlParams = new URLSearchParams(window.location.search);
+        var inqVehicle = urlParams.get('inquire');
+        var inqModel = urlParams.get('model');
+        if (inqVehicle) {
+          var currentLang = (window.RootZeI18n && window.RootZeI18n.getLanguage()) || 'en';
+          var prefix = (currentLang === 'zh') ? '咨询意向车型：' : 'Inquiry regarding: ';
+          var modelSnippet = inqModel ? ' (' + ((currentLang === 'zh') ? '公告型号: ' : 'Model: ') + inqModel + ')' : '';
+          var vehicleInquiryText = prefix + decodeURIComponent(inqVehicle) + modelSnippet;
+          var curMsg = $('#inqMessage').val() || '';
+          if (curMsg.indexOf(inqVehicle) === -1) {
+            $('#inqMessage').val(vehicleInquiryText + (curMsg ? '\n\n' + curMsg : ''));
+          }
+          if ($('#inqCategory option[value="Special Purpose Vehicles"]').length > 0) {
+            $('#inqCategory').val('Special Purpose Vehicles');
+          }
+        }
+      }
+    } catch (e) {
+      console.warn('Inquiry URL param parse failed:', e);
+    }
+
+    // Expand All / Collapse All controls for SPV Accordion
+    $('#btnExpandAll').on('click', function() {
+      $('#spvAccordion .collapse').collapse('show');
+    });
+    $('#btnCollapseAll').on('click', function() {
+      $('#spvAccordion .collapse').collapse('hide');
+    });
+
+    // High-resolution vehicle image lightbox
+    if ($('.image-popup').length > 0 && $.fn.magnificPopup) {
+      $('.image-popup').magnificPopup({
+        type: 'image',
+        closeOnContentClick: true,
+        mainClass: 'mfp-img-mobile',
+        image: {
+          verticalFit: true
+        }
+      });
+    }
+
     // 7. B2B Inquiry Form Submission (Web3Forms AJAX with graceful fallback)
     $('#inquiryForm').on('submit', function(e) {
       e.preventDefault();

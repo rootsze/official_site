@@ -108,14 +108,29 @@
       </div>
     </section>
 
-                        <!-- Product Showcase Catalog Accordion (Plan B) -->
+                            <!-- Product Showcase Catalog Accordion (Plan B) -->
     <section class="ftco-section bg-light py-5" id="catalog-section">
       <div class="container">
-        <div class="row justify-content-center mb-5">
+        <div class="row justify-content-center mb-4">
           <div class="col-md-9 text-center heading-section ftco-animate">
             <span class="subheading" style="color: var(--rootze-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;" data-i18n="catalog.spv.section_badge">Factory Direct Product Matrix</span>
             <h2 class="mb-3" data-i18n="catalog.spv.section_title">Commercial Special Purpose Vehicles & Fleet Catalog</h2>
             <p class="text-muted" data-i18n="catalog.spv.section_desc">Export-certified special utility and transport vehicles engineered on Dongfeng, Auman, Howo, and Sitrak chassis. Click on any category to browse our 28 models, or view individual product pages for complete specifications.</p>
+          </div>
+        </div>
+
+        <!-- Expand / Collapse All Controls & Total Count -->
+        <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap" style="gap: 10px;">
+          <div class="text-muted font-weight-bold" style="font-size: 14px;">
+            <i class="ion-ios-car mr-1 text-primary"></i> <span data-i18n="catalog.spv.total_models_label">4 Vehicle Categories · 28 Export Models</span>
+          </div>
+          <div class="btn-group" role="group" aria-label="Accordion controls">
+            <button type="button" id="btnExpandAll" class="btn btn-sm btn-outline-primary font-weight-bold py-1 px-3" style="font-size: 12.5px;">
+              <i class="ion-ios-arrow-down mr-1"></i><span data-i18n="catalog.spv.btn_expand_all">Expand All</span>
+            </button>
+            <button type="button" id="btnCollapseAll" class="btn btn-sm btn-outline-secondary font-weight-bold py-1 px-3" style="font-size: 12.5px;">
+              <i class="ion-ios-arrow-up mr-1"></i><span data-i18n="catalog.spv.btn_collapse_all">Collapse All</span>
+            </button>
           </div>
         </div>
 

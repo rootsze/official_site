@@ -4,6 +4,7 @@ import xml.etree.ElementTree as ET
 import re
 import html
 import json
+import urllib.parse
 
 DOC_DIR = '/Users/brainzhang/work/rootze/landingpage/resource/ProductBrochure/Special Purpose Vehicles/产品介绍文档'
 IMG_DIR = '/Users/brainzhang/work/rootze/landingpage/images/products/vehicles'
@@ -730,6 +731,24 @@ def build_bilingual_dictionary(parsed_products):
     en_dict['catalog.spv.disclaimer_text'] = 'Note: Specifications are as published by the manufacturer; multiple values indicate different available configurations. Please confirm exact technical parameters and chassis options with our export team before ordering.'
     zh_dict['catalog.spv.disclaimer_text'] = '注：以上技术参数供参考，多个数值代表不同选配规格；具体参数及底盘配置以商务合同与技术协议为准。'
 
+    en_dict['catalog.spv.btn_expand_all'] = 'Expand All'
+    zh_dict['catalog.spv.btn_expand_all'] = '展开全部'
+
+    en_dict['catalog.spv.btn_collapse_all'] = 'Collapse All'
+    zh_dict['catalog.spv.btn_collapse_all'] = '折叠全部'
+
+    en_dict['catalog.spv.nav_prev'] = 'Previous Model'
+    zh_dict['catalog.spv.nav_prev'] = '上一款车型'
+
+    en_dict['catalog.spv.nav_next'] = 'Next Model'
+    zh_dict['catalog.spv.nav_next'] = '下一款车型'
+
+    en_dict['catalog.spv.total_models_label'] = '4 Vehicle Categories · 28 Export Models'
+    zh_dict['catalog.spv.total_models_label'] = '4 大专用车分类 · 28 款出口车型'
+
+    en_dict['catalog.spv.click_to_zoom'] = 'Click to zoom'
+    zh_dict['catalog.spv.click_to_zoom'] = '点击查看高清大图'
+
     # Categories
     for c in CATEGORIES:
         cid = c['id']
@@ -807,17 +826,32 @@ def update_i18n_js(en_dict, zh_dict):
         f.write(content)
     print(f"js/i18n.js successfully updated! Injected {len(en_dict)} EN keys and {len(zh_dict)} ZH keys.")
 
-def build_detail_page_i18n(prod_meta, doc_data):
+def build_detail_page_i18n(prod_meta, doc_data, all_parsed):
     doc_file, slug, img, cat_id, display_title, display_title_zh, badge_class, category_name = prod_meta
     
     cat_obj = next(c for c in CATEGORIES if c['id'] == cat_id)
     cat_badge_key = f"catalog.spv.{cat_id}_badge"
+    
+    # Adjacent products in same category
+    cat_products = [p for p in all_parsed if p['meta'][3] == cat_id]
+    curr_idx = next(i for i, p in enumerate(cat_products) if p['meta'][1] == slug)
+    prev_prod = cat_products[(curr_idx - 1) % len(cat_products)]
+    next_prod = cat_products[(curr_idx + 1) % len(cat_products)]
+    
+    prev_slug = prev_prod['meta'][1]
+    prev_title = prev_prod['meta'][4]
+    next_slug = next_prod['meta'][1]
+    next_title = next_prod['meta'][4]
     
     model_no = ''
     for s in doc_data['specs']:
         if 'model' in s['key_en'].lower():
             model_no = s['val_en']
             break
+            
+    url_title = urllib.parse.quote(display_title)
+    url_model = urllib.parse.quote(model_no)
+    quote_url = f"../special-vehicles.html?inquire={url_title}&model={url_model}#contact"
             
     # Highlight badges
     badges = []
@@ -1023,10 +1057,15 @@ def build_detail_page_i18n(prod_meta, doc_data):
     <section class="ftco-section bg-white py-5">
       <div class="container">
         <div class="row align-items-start">
-          <!-- Left: Product Image -->
+          <!-- Left: Product Image with Magnific Popup -->
           <div class="col-lg-5 mb-4 mb-lg-0">
-            <div class="border rounded p-3 bg-white shadow-sm text-center">
-              <img src="../../images/products/vehicles/{img}" alt="{html.escape(display_title)}" class="img-fluid rounded" style="width: 100%; max-height: 420px; object-fit: contain; background: #fdfdfd;">
+            <div class="border rounded p-3 bg-white shadow-sm text-center position-relative">
+              <a href="../../images/products/vehicles/{img}" class="image-popup d-block" title="{html.escape(display_title)}">
+                <img src="../../images/products/vehicles/{img}" alt="{html.escape(display_title)}" class="img-fluid rounded" style="width: 100%; max-height: 420px; object-fit: contain; background: #fdfdfd; transition: transform 0.3s ease;">
+                <div class="position-absolute" style="bottom: 18px; right: 24px; background: rgba(11, 19, 37, 0.75); color: #fff; padding: 4px 10px; border-radius: 20px; font-size: 11px; pointer-events: none;">
+                  <i class="ion-ios-search mr-1"></i><span data-i18n="catalog.spv.click_to_zoom">Click to zoom</span>
+                </div>
+              </a>
             </div>
           </div>
           
@@ -1048,7 +1087,7 @@ def build_detail_page_i18n(prod_meta, doc_data):
             
             <!-- CTA Buttons -->
             <div class="d-flex flex-wrap gap-2 pt-3 border-top">
-              <a href="../special-vehicles.html#contact" class="btn btn-primary py-2 px-4 font-weight-bold mr-2"><i class="ion-ios-paper-plane mr-1"></i> <span data-i18n="catalog.spv.btn_quote">Request a Factory Quote</span></a>
+              <a href="{quote_url}" class="btn btn-primary py-2 px-4 font-weight-bold mr-2"><i class="ion-ios-paper-plane mr-1"></i> <span data-i18n="catalog.spv.btn_quote">Request a Factory Quote</span></a>
               <a href="../special-vehicles.html" class="btn btn-outline-secondary py-2 px-3 font-weight-bold"><i class="ion-ios-arrow-back mr-1"></i> <span data-i18n="catalog.spv.btn_back">Back to Vehicle Catalog</span></a>
             </div>
           </div>
@@ -1059,6 +1098,34 @@ def build_detail_page_i18n(prod_meta, doc_data):
 {optional_section_html}
 
 {features_section_html}
+
+        <!-- Adjacent Models Navigation (Within Same Category) -->
+        <div class="row mt-5 pt-4 border-top">
+          <div class="col-6 text-left">
+            <a href="{prev_slug}.html" class="d-inline-flex align-items-center text-dark text-decoration-none py-2 px-3 border rounded bg-light hover-shadow" style="transition: all 0.2s ease;">
+              <span class="mr-2 text-primary" style="font-size: 22px;"><i class="ion-ios-arrow-dropleft-circle"></i></span>
+              <div class="d-none d-sm-block">
+                <small class="text-muted d-block font-weight-bold text-uppercase" style="font-size: 11px;" data-i18n="catalog.spv.nav_prev">Previous Model</small>
+                <span class="font-weight-bold" style="font-size: 13.5px;" data-i18n="spv.{prev_slug}.title">{html.escape(prev_title)}</span>
+              </div>
+              <div class="d-block d-sm-none">
+                <span class="font-weight-bold" style="font-size: 12px;" data-i18n="catalog.spv.nav_prev">Previous</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 text-right">
+            <a href="{next_slug}.html" class="d-inline-flex align-items-center justify-content-end text-dark text-decoration-none py-2 px-3 border rounded bg-light hover-shadow ml-auto" style="transition: all 0.2s ease;">
+              <div class="d-none d-sm-block text-right">
+                <small class="text-muted d-block font-weight-bold text-uppercase" style="font-size: 11px;" data-i18n="catalog.spv.nav_next">Next Model</small>
+                <span class="font-weight-bold" style="font-size: 13.5px;" data-i18n="spv.{next_slug}.title">{html.escape(next_title)}</span>
+              </div>
+              <div class="d-block d-sm-none text-right">
+                <span class="font-weight-bold" style="font-size: 12px;" data-i18n="catalog.spv.nav_next">Next</span>
+              </div>
+              <span class="ml-2 text-primary" style="font-size: 22px;"><i class="ion-ios-arrow-dropright-circle"></i></span>
+            </a>
+          </div>
+        </div>
 
         <!-- Disclaimer -->
         <div class="row mt-4">
@@ -1271,11 +1338,26 @@ def build_main_catalog_section_i18n(parsed_products):
     catalog_section = f'''    <!-- Product Showcase Catalog Accordion (Plan B) -->
     <section class="ftco-section bg-light py-5" id="catalog-section">
       <div class="container">
-        <div class="row justify-content-center mb-5">
+        <div class="row justify-content-center mb-4">
           <div class="col-md-9 text-center heading-section ftco-animate">
             <span class="subheading" style="color: var(--rootze-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;" data-i18n="catalog.spv.section_badge">Factory Direct Product Matrix</span>
             <h2 class="mb-3" data-i18n="catalog.spv.section_title">Commercial Special Purpose Vehicles & Fleet Catalog</h2>
             <p class="text-muted" data-i18n="catalog.spv.section_desc">Export-certified special utility and transport vehicles engineered on Dongfeng, Auman, Howo, and Sitrak chassis. Click on any category to browse our 28 models, or view individual product pages for complete specifications.</p>
+          </div>
+        </div>
+
+        <!-- Expand / Collapse All Controls & Total Count -->
+        <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap" style="gap: 10px;">
+          <div class="text-muted font-weight-bold" style="font-size: 14px;">
+            <i class="ion-ios-car mr-1 text-primary"></i> <span data-i18n="catalog.spv.total_models_label">4 Vehicle Categories · 28 Export Models</span>
+          </div>
+          <div class="btn-group" role="group" aria-label="Accordion controls">
+            <button type="button" id="btnExpandAll" class="btn btn-sm btn-outline-primary font-weight-bold py-1 px-3" style="font-size: 12.5px;">
+              <i class="ion-ios-arrow-down mr-1"></i><span data-i18n="catalog.spv.btn_expand_all">Expand All</span>
+            </button>
+            <button type="button" id="btnCollapseAll" class="btn btn-sm btn-outline-secondary font-weight-bold py-1 px-3" style="font-size: 12.5px;">
+              <i class="ion-ios-arrow-up mr-1"></i><span data-i18n="catalog.spv.btn_collapse_all">Collapse All</span>
+            </button>
           </div>
         </div>
 
@@ -1327,7 +1409,7 @@ def sync_all():
     for p in parsed_products:
         meta = p['meta']
         slug = meta[1]
-        page_html = build_detail_page_i18n(meta, p['data'])
+        page_html = build_detail_page_i18n(meta, p['data'], parsed_products)
         out_file = os.path.join(OUT_DIR, f"{slug}.html")
         with open(out_file, 'w', encoding='utf-8') as f:
             f.write(page_html)
