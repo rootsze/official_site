@@ -244,7 +244,7 @@
       "footer.copyright": "© 2026 襄阳如志进出口有限公司 Xiangyang Rootze Import & Export Co., Ltd. All rights reserved.",
 
       // Product catalog keys
-      "products.btn_catalog": "Explore Full Catalog",
+      "products.btn_catalog": "Explore Product Range",
       "products.quick_specs": "Quick Specs",
       "products.tech_specs_title": "Technical Specifications & Comparison",
       "products.elec_hero_title": "Heavy-Duty Motor Starting & Power Distribution Systems",
@@ -719,7 +719,7 @@
       "footer.copyright": "© 2026 襄阳如志进出口有限公司 版权所有。",
 
       // Product catalog keys
-      "products.btn_catalog": "浏览完整目录",
+      "products.btn_catalog": "查看产品矩阵",
       "products.quick_specs": "快速技术规格",
       "products.tech_specs_title": "技术参数与规格对比",
       "products.elec_hero_title": "工业电气控制系统与重载电机起动解决方案",

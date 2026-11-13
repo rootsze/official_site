@@ -70,4 +70,8 @@ test('i18n engine has symmetric keys and exports RootZeI18n', () => {
   assert.equal(i18n.translations.zh['contact.form_company'], '企业名称');
   assert.equal(i18n.translations.zh['contact.form_message'], '请告诉我们您的项目需求...');
   assert.equal(i18n.translations.zh['contact.ph_message'], '请告诉我们您的项目需求，我们的工程师团队将在 12 个工作小时内为您评估并回复。');
+
+  // Verify product catalog button copy
+  assert.equal(i18n.translations.en['products.btn_catalog'], 'Explore Product Range');
+  assert.equal(i18n.translations.zh['products.btn_catalog'], '查看产品矩阵');
 });
