@@ -801,6 +801,10 @@ def update_i18n_js(en_dict, zh_dict):
     with open(I18N_FILE, 'r', encoding='utf-8') as f:
         content = f.read()
 
+    if '"catalog.spv.btn_expand_all"' in content:
+        print("js/i18n.js already contains SPV dictionaries, skipping duplicate injection.")
+        return
+
     en_lines = []
     for k, v in sorted(en_dict.items()):
         v_clean = v.replace('\n', ' ').strip()
@@ -1342,7 +1346,7 @@ def build_main_catalog_section_i18n(parsed_products):
           <div class="col-md-9 text-center heading-section ftco-animate">
             <span class="subheading" style="color: var(--rootze-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;" data-i18n="catalog.spv.section_badge">Factory Direct Product Matrix</span>
             <h2 class="mb-3" data-i18n="catalog.spv.section_title">Commercial Special Purpose Vehicles & Fleet Catalog</h2>
-            <p class="text-muted" data-i18n="catalog.spv.section_desc">Export-certified special utility and transport vehicles engineered on Dongfeng, Auman, Howo, and Sitrak chassis. Click on any category to browse our 28 models, or view individual product pages for complete specifications.</p>
+            <p class="text-muted" data-i18n="catalog.spv.section_desc">Export-certified special utility and transport vehicles engineered on Dongfeng, Auman, Howo, and Sitrak chassis (LHD / RHD). Click on any category to browse our 28 models, or view individual product pages for complete specifications.</p>
           </div>
         </div>
 

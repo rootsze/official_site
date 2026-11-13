@@ -25,7 +25,7 @@ test('Homepage product section cards have Explore Product Range button and no In
     assert.equal(catalogBtnMatches?.length, 4, `${file} should have exactly 4 Explore Product Range buttons`);
   }
 
-  // Ensure subpages still retain Inquire Price
+  // Ensure subpages still retain Inquire / RFQ buttons
   const subpages = [
     'products/special-vehicles.html',
     'products/railway-equipment.html',
@@ -33,6 +33,9 @@ test('Homepage product section cards have Explore Product Range button and no In
   ];
   for (const page of subpages) {
     const content = fs.readFileSync(path.resolve(process.cwd(), page), 'utf-8');
-    assert.ok(content.includes('data-i18n="products.btn_inquire"'), `${page} must retain products.btn_inquire`);
+    assert.ok(
+      content.includes('data-i18n="products.btn_inquire"') || content.includes('data-i18n="catalog.spv.btn_rfq"'),
+      `${page} must retain inquiry action button (products.btn_inquire or catalog.spv.btn_rfq)`
+    );
   }
 });
