@@ -44,11 +44,12 @@ test('index.html structure contains official brand, 4 product sectors, about, wh
     'Track record counter section must not be active on page'
   );
 
-  // Verify 4 core product cards in #products
-  assert.match(html, /data-inquire-cat="Special Purpose Vehicles \(SPV & Trucks\)"/, 'Card 1 (Special Purpose Vehicles) must exist with inquire link');
-  assert.match(html, /data-inquire-cat="Railway Equipment & Maintenance Tools"/, 'Card 2 (Railway track equipment) must exist with inquire link');
-  assert.match(html, /data-inquire-cat="Automotive Manufacturing Lines \(Brake Pads\)"/, 'Card 3 (Brake pad equipment) must exist with inquire link');
-  assert.match(html, /data-inquire-cat="Industrial Electrical Systems \(Soft Starters\)"/, 'Card 4 (Electrical systems) must exist with inquire link');
+  // Verify 4 core product cards in #products have titles and Explore Product Range buttons
+  assert.ok(html.includes('data-i18n="products.cat3_title"'), 'Card 1 (Special Purpose Vehicles) title must exist');
+  assert.ok(html.includes('data-i18n="products.cat2_title"'), 'Card 2 (Railway track equipment) title must exist');
+  assert.ok(html.includes('data-i18n="products.cat4_title"'), 'Card 3 (Brake pad equipment) title must exist');
+  assert.ok(html.includes('data-i18n="products.cat1_title"'), 'Card 4 (Electrical systems) title must exist');
+  assert.equal(html.match(/data-i18n="products\.btn_catalog">Explore Product Range<\/a>/g)?.length, 4, 'All 4 cards must have Explore Product Range CTA');
 
   // Verify deep links to product catalog pages
   assert.ok(html.includes('./products/electrical-systems.html'), 'Card 1 must link to electrical catalog');
